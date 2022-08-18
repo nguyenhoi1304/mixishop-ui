@@ -38,13 +38,13 @@ const listproducts = [
 
 const ProductsImg = [
     {
-        link: 'http://localhost:3001/static/media/aomixi.8f284c1cb12d62f173b5.jpg'
+        link: 'https://shop.mixigaming.com/wp-content/uploads/2021/01/2-1536x1024.jpg'
     },
     {
         link: "https://shop.mixigaming.com/wp-content/uploads/2021/11/NM_D9485-scaled.jpg"
     },
     {
-        link: 'http://localhost:3001/static/media/binhgiunhiet.8da9fd810f54d90a282c.jpg'
+        link: 'https://shop.mixigaming.com/wp-content/uploads/2021/01/binh-giu-nhiet-mixi-4-1536x1024.jpg'
     },
 ]
 
@@ -85,11 +85,6 @@ function Products() {
                     </div>
 
                 ))}
-
-
-
-
-
 
             </div>
         </>

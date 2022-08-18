@@ -17,7 +17,6 @@ const cx = classNames.bind(styles)
 
 let useClickOutside = (handler) => {
     let search = useRef();
-
     useEffect(() => {
         let mybeHandler = (event) => {
             if (!search.current.contains(event.target)) {
@@ -55,9 +54,6 @@ let useClickOutside2 = (handler2) => {
 
 
 
-
-
-
 function Header() {
     const [showSearch, setShowSearch] = useState(false)
     const [showitem, setShowItem] = useState(false)
@@ -72,7 +68,13 @@ function Header() {
     })
 
 
+    const changeHeader = () => {
+        if (window.scrollY >= 100) {
 
+        }
+
+        window.addEventListener('scroll', changeHeader)
+    }
     return (
         <>
             {showSearch && (<div className={cx('modal')}>
@@ -92,7 +94,7 @@ function Header() {
                 </div>
             </div>)}
 
-            <div className={cx('wrapper')}>
+            <div className={cx('navbar')}>
 
                 <div className={cx('inner')}>
 
@@ -108,8 +110,6 @@ function Header() {
                             >
                                 <SearchIcon className={cx('search-icon')} />
                             </button>
-
-
 
                             <Link to={config.routes.home} className={cx('header-link')}>HOME</Link>
                             <div ref={listproducst} className={cx('header-link')}>
@@ -154,7 +154,8 @@ function Header() {
 
                     </div>
                 </div>
-            </div >
+            </div>
+
         </>
     );
 }

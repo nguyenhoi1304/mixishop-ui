@@ -39,7 +39,7 @@
 
 }
 
-.wrapper {
+.navbar {
     --search-boder-radius: 92px;
     --search-height: 65px;
     --search-top-spacer: 9px;
@@ -51,8 +51,25 @@
     height: var(--default-layout-header-height);
     width: 100%;
     background-color: #fff;
-
 }
+
+.active {
+  
+    background-color: red;
+    animation: slideInleft ease-in .5s;
+}
+
+@keyframes slideInleft 
+    {
+        from{
+            opacity: 0;
+            transform: translateY(-20px);
+        }
+        to{
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
 
 .inner {
     display: flex;
