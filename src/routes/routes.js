@@ -9,7 +9,7 @@ import Upload from '~/pages/Upload'
 import Search from '~/pages/Search'
 import Live from '~/pages/Live'
 import Notification from '~/pages/Notification'
-
+import ListProducts from '~/pages/ListProducts'
 
 
 const publicRoutes = [
@@ -20,6 +20,9 @@ const publicRoutes = [
     { path: config.routes.upload, component: Upload, layout: HeaderOnly },
     { path: config.routes.search, component: Search, layout: null },
     { path: config.routes.notification, component: Notification },
+    { path: config.routes.listProducts.list, component: ListProducts },
+
+
 ]
 
 const privateRoutes = [

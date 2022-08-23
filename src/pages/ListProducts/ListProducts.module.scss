@@ -1,0 +1,106 @@
+.listProducts {
+    margin-top: 70px;
+    background-color: #f0f0f0;
+    padding: 40px 0;
+}
+
+.pageList {
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.title {
+    display: flex;
+    padding-top: 10px;
+}
+
+.link-home {
+    color: rgba(102,102,102,0.7);
+    margin-right: 4px;
+    &:hover {
+        color:#000;
+    }
+}
+
+
+
+.showsResult {
+    display: flex;
+}
+
+.selects {
+    background-color:#fcfcfc;
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 20px;
+    width: 280px;
+    border: 1px solid #ddd;
+    box-shadow: inset 0 1px 2px rgb(0 0 0 / 10%);
+    &:hover {
+        background-color: #fff;
+    }
+}
+
+.filter {
+    margin-left: 50px;
+    position: relative;
+    cursor: default;
+    
+}
+
+.list-filter {
+    position: absolute;
+    z-index: 500;
+
+    list-style: none;
+    width: 100%;
+    box-shadow: inset 0 -1.4em 1em 0 rgb(0 0 0 / 2%);
+    border: 1px solid #ccc;
+}
+
+.item-filter {
+    list-style: none;
+    background-color: #fff;
+    padding-left: 20px;
+    padding-top: 2px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    &:hover {
+        background-color: #046ee5;
+        color: #fff;
+    }
+}
+
+.title-filter {
+    font-size: 1.8rem;
+    font-weight: 600;
+   
+}
+
+.filter-btn {
+    margin-top: 10px;
+    padding: 6px 12px;
+    background-color: #666;
+    border-radius: 99px;
+    font-size: 1.6rem;
+    color:#fff;
+    font-weight: 550;
+    cursor: pointer;
+    &:hover {
+        background-color: rgba(58, 50, 50, 0.963);
+    }
+}
+
+
+.price {
+    margin-left: 8px;
+    display: flex;
+    font-size: 1.6rem;
+}
+
+.price-show {
+    margin-left: 5px;
+   
+    font-weight: 600;
+}

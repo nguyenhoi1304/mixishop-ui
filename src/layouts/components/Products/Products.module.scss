@@ -1,131 +1,32 @@
-
 .container {
-    display: flex;
-    position: absolute;
     width: 100%;
     padding-top: 30px;
     box-shadow: 1px 1px 15px rgb(0 0 0 / 15%);
     background-color: #f5f0ea;
     border-top: 2px solid #ddd;
     justify-content: space-around;
-
 }
-
-.products-list {
-    position: relative;
-    display: flex;
-    width: 25%;
-    padding-left: 18px;
-    align-items: center;
-    color: #000;
-    font-size: 1.4rem;
-    font-weight: 500;
-    outline: none;
-    padding-bottom: 40px;
-    
-}
-.title-list {
-    font-size: 2rem;
-    font-weight: 600;
-    color: #007784;
-    cursor: text;
-
-}
-
-.item-list {
-    margin-left: 15px;
-    list-style: none;
-   
-}
-
-.item {
-    display: flex;
-    align-items: center;
-}
-
-.item-products {
-    padding: 10px 8px;
-    font-weight: 400;
-    font-size: 1.6rem;
-    color: #000;
-    position: relative;
-   
-}
-
-.name-products{
-    color:rgb(119, 119,119);
-    font-size: 1.8rem;
-    &:hover {
-        color: #000;
-    }
-}
-.red {
-    color: white;
-    border-radius: 2px;
-    background-color: rgba(255, 0, 0, 0.872);
-    padding: 0 3px;
-    font-weight: 700;
-    font-size: 1.1rem;
-    margin-left: 2px;
-
-} 
-
-.blue {
-    color: white;
-    border-radius: 2px;
-    background-color: #007784;
-    padding: 1px 3px;
-    font-weight: 700;
-    font-size: 1.1rem;
-    margin-left: 2px;
-}
-.green{
-   
-    color: white;
-    border-radius: 2px;
-    background-color: #7a9c59;
-    padding: 1px 3px;
-    font-weight: 700;
-    transform:  translateY(-50%);
-    font-size: 1.1rem;
-    margin-left: 2px;
-
-}
-
-.link-lookall {
-    align-items: center;
-    padding: 9px 20px;
-    color: #007784;
-    background-color: white;
-    margin: 0 -4px;
-    border: 2px solid #007784;
-    border-radius: 12px;
-    &:hover {
-        background-color:#007784;
-        color: white;
-    }
-}
-
 
 //
+
+.hayghe {
+    width: 100%;
+
+}
 .products-lego {
-    width: 25%;
-    position: relative;
     margin: 0 20px;
+    width: 100%;
 }
 
 .item-lego {
-    position: absolute;
+    display: flex;
     width: 100%;
     height: 250px;
     overflow: hidden;
 
 }
 
-
-
 .img-legomixi {
-    position: absolute;
     right: 0;
     width: 100%;
     height: 100%;
@@ -143,7 +44,6 @@
 }
 
 .box-text-seemore {
-    position: relative;
     display: flex;
     top: 290px;
     align-items: center; 
@@ -159,11 +59,30 @@
     }
 }
 
+.btn-see-all {
+    margin-left: 40px;
+    padding-top: 10px;
+    padding-bottom: 35px;
+
+}
+.link-lookall {
+    align-items: center;
+    color: #007784;
+    padding: 9px 20px;
+    background-color: white;
+    border: 2px solid #007784;
+    border-radius: 12px;
+    &:hover {
+        background-color:#007784;
+        color: white;
+    }
+}
+
 .see-more {
     font-size: 1.4rem;
     font-weight: 700;
     color: #007784;
-    margin-top: 10px;
+    margin-top: 15px;
     &:hover {
         color:rgb(119, 119,119);
     }
