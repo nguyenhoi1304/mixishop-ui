@@ -11,6 +11,7 @@
 .List-products {
     width: 25%;
     padding:  10px;
+    cursor: pointer;
 }
 
 
@@ -34,6 +35,20 @@
     opacity: 0;
 }
 
+.box-item {
+    position: relative;
+}
+
+.sale {
+    position: absolute;
+    top: 30px;
+    padding: 12px 10px;
+    background-color: #007784;
+    border-radius: 25px;
+    color: #fefeff;
+    font-weight: 600;
+    font-size: 1.5rem;
+}
 
 .products-notification {
     position: absolute;

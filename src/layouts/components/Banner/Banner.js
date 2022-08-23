@@ -9,7 +9,7 @@ const cx = classNames.bind(styles)
 
 function banner() {
     return (
-        <>
+        <div className={cx('banner')}>
             <div className={cx('banner-img')}>
                 <img src={bannerMixi} alt="banner-mixi" className={cx('img-mixi')}></img>
             </div>
@@ -21,7 +21,7 @@ function banner() {
                 </a>
 
             </div>
-        </>
+        </div>
     );
 }
 

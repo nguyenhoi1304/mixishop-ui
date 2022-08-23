@@ -1,9 +1,10 @@
 import classNames from 'classnames/bind';
-import styles from './Sidebar.module.scss';
+import styles from './Feedback.module.scss';
 import video1 from '~/assets/videos/video-1.mp4'
 import { Grid } from '@mui/material';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faInstagram } from '@fortawesome/free-brands-svg-icons';
+import ReactPlayer from 'react-player';
 
 const cx = classNames.bind(styles);
 
@@ -18,43 +19,58 @@ const imgDescribe = [
     },
     {
         id: 3,
-        link: 'https://shop.mixigaming.com/wp-content/uploads/sb-instagram-feed-images/278487776_506790190981089_923250684233744838_nfull.jpg'
+        link: 'https://shop.mixigaming.com/wp-content/uploads/sb-instagram-feed-images/278487776_506790190981089_923250684233744838_nfull.jpg',
+
     },
     {
         id: 4,
-        link: 'https://shop.mixigaming.com/wp-content/uploads/sb-instagram-feed-images/276019325_455851319570750_5043674034086534611_nfull.jpg'
+        link: 'https://shop.mixigaming.com/wp-content/uploads/sb-instagram-feed-images/276019325_455851319570750_5043674034086534611_nfull.jpg',
+
+
     },
     {
         id: 5,
-        link: 'https://shop.mixigaming.com/wp-content/uploads/sb-instagram-feed-images/274924490_703499940652116_8381906484330626711_nlow.jpg'
+        link: 'https://shop.mixigaming.com/wp-content/uploads/sb-instagram-feed-images/274924490_703499940652116_8381906484330626711_nlow.jpg',
+
+
     },
     {
         id: 6,
-        link: 'https://shop.mixigaming.com/wp-content/uploads/sb-instagram-feed-images/274260024_158591116523194_8931527463177837126_nfull.jpg'
+        link: 'https://shop.mixigaming.com/wp-content/uploads/sb-instagram-feed-images/274260024_158591116523194_8931527463177837126_nfull.jpg',
+
+
     },
     {
         id: 7,
-        link: 'https://shop.mixigaming.com/wp-content/uploads/sb-instagram-feed-images/272373791_225970116402095_6070615666538848304_nlow.jpg'
+        link: 'https://shop.mixigaming.com/wp-content/uploads/sb-instagram-feed-images/272373791_225970116402095_6070615666538848304_nlow.jpg',
+
+
     },
     {
         id: 8,
-        link: 'https://shop.mixigaming.com/wp-content/uploads/sb-instagram-feed-images/274015172_925361664793470_4512605055108024848_nfull.jpg'
+        link: 'https://shop.mixigaming.com/wp-content/uploads/sb-instagram-feed-images/274015172_925361664793470_4512605055108024848_nfull.jpg',
+
+
     },
     {
         id: 9,
-        link: 'https://shop.mixigaming.com/wp-content/uploads/sb-instagram-feed-images/270020878_306162494764493_7328374017755712493_nlow.jpg'
+        link: 'https://shop.mixigaming.com/wp-content/uploads/sb-instagram-feed-images/270020878_306162494764493_7328374017755712493_nlow.jpg',
+
+
     },
     {
         id: 10,
-        link: 'https://shop.mixigaming.com/wp-content/uploads/sb-instagram-feed-images/269864022_615881856352435_974588027566221583_nlow.jpg'
+        link: 'https://shop.mixigaming.com/wp-content/uploads/sb-instagram-feed-images/269864022_615881856352435_974588027566221583_nlow.jpg',
+
     },
 
 
 ]
 
-function Sidebar() {
+function Feedback() {
     return (
         <div className={cx('product-description')}>
+
             <aside className={cx('siderbar')}>
                 <div className={cx('siderbar-description')}>
                     <span className={cx('name')} >MiXiShop</span>
@@ -67,13 +83,15 @@ function Sidebar() {
                 </div>
                 <div className={cx('siderbar-video')}>
                     <div className={cx('overlay')}> </div>
-                    <video src={video1}
+                    <ReactPlayer url={video1}
                         className={cx('video1')}
-                        autoPlay
-                        controls
-                        loop
-                    >
-                    </video>
+                        width={'100%'}
+                        height={'350px'}
+                        playing={true}
+                        controls={false}
+                        muted={true}
+                        loop={true}
+                    />
                     <div>
                         <p className={cx('feedback')}>Awesome feedback</p>
                     </div>
@@ -101,4 +119,4 @@ function Sidebar() {
     );
 }
 
-export default Sidebar;
+export default Feedback;

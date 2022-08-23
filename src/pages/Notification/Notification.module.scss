@@ -1,0 +1,50 @@
+.page {
+    background-color: #f0f0f0;
+    padding: 30px 0;
+}
+
+.page-notification {
+    text-align: center;
+    font-size: 1.8rem;
+    color: #cf2e2e;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.page-text {
+    padding: 0 30px;
+    font-size: 1.6rem;
+    font-family: 450;
+    max-width: 95%;
+}
+
+.emoji {
+    object-fit: cover;
+    width: 16px;
+    height: 16px;
+}
+.phone-img {
+    object-fit: cover;
+    width: 16px;
+    height: 16px;
+}
+
+.text-hotline {
+    display: flex;
+    padding: 20px 0;
+}
+
+.hotline {
+    margin-left: 3px;
+    color: #cf2e2e !important;
+}
+
+.text-spacing {
+    padding-bottom: 20px;
+} 
+.link-hotline {
+    color:#007784;
+    &:hover {
+        color:#8224e3;
+    }
+}

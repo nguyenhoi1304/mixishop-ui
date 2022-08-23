@@ -80,17 +80,17 @@ function Footer() {
                 <div style={{ display: 'flex' }}>
                     <Tippy
                         delay={[0, 50]}//ơbắt đầu, kết thúc]
-                        offset={[10, 10]} //[chiều ngang, chiều cao]
+                        offset={[10, 6]} //[chiều ngang, chiều cao]
                         content='Follow on FaceBook'
                         placement='top'>
-                        <p><FontAwesomeIcon className={cx('icon-link')} icon={faFacebook} /></p>
+                        <p style={{ cursor: 'pointer' }}><FontAwesomeIcon className={cx('icon-link')} icon={faFacebook} /></p>
                     </Tippy>
                     <Tippy
                         delay={[0, 50]}//ơbắt đầu, kết thúc]
-                        offset={[10, 10]} //[chiều ngang, chiều cao]
+                        offset={[10, 6]} //[chiều ngang, chiều cao]
                         content='Follow on Instagram'
                         placement='top'>
-                        <p><FontAwesomeIcon className={cx('icon-link')} icon={faInstagram} /></p>
+                        <p style={{ cursor: 'pointer' }}><FontAwesomeIcon className={cx('icon-link')} icon={faInstagram} /></p>
                     </Tippy>
                 </div>
             </div>

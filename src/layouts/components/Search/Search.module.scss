@@ -11,14 +11,14 @@
     border-color: rgba(255,255,255,0.09);
     font-family: var(--font-family);
     height: var(--search-height);
-    border-radius: 15px;
+    border-radius: 25px;
     border: 1.5px solid transparent;
-    padding: 16px;
+    padding: 18px;
     display: flex;
     left: 50%;
     top: 50%;
     transform: translateX(-50%) translateY(-50%);
-    z-index: 3;
+    z-index: 4;
     input {
         flex: 1;
         padding-right: 40px;

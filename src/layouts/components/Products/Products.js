@@ -1,26 +1,34 @@
-
 import { faAngleRight } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import classNames from 'classnames/bind';
 import styles from './Products.module.scss'
-
-
 
 const cx = classNames.bind(styles);
 
 const listproducts = [
     {
         title: 'Đồ lưu niệm Mixi',
-        icon: faAngleRight
+        icon: faAngleRight,
+        trend: {
+            content: 'HOT',
+            class: 'red',
+        }
     },
     {
         title: 'Áo Mixi',
-        icon: faAngleRight
-
+        icon: faAngleRight,
+        trend: {
+            content: 'NEW',
+            class: 'blue',
+        }
     },
     {
         title: 'Áo ba lỗ',
-        icon: faAngleRight
+        icon: faAngleRight,
+        trend: {
+            content: 'POP',
+            class: 'green',
+        }
 
     },
     {
@@ -59,12 +67,13 @@ function Products() {
                         {listproducts.map((item, index) => (
                             <div className={cx('item')} key={index}><FontAwesomeIcon icon={faAngleRight} />
                                 <li className={cx('item-products')}>
-                                    <span className={cx('name-products1')}>{item.title}</span>
+                                    <span className={cx('name-products')}>{item.title}</span>
+                                    {item.trend && <span className={cx([item.trend.class])}>{item.trend.content}</span>}
                                 </li>
                             </div>
                         ))}
 
-                        <div style={{ margin: '10px 0 35px 0', alignItems: 'center' }}>
+                        <div style={{ margin: '32px 0 35px 0', alignItems: 'center' }}>
                             <a href='https://shop.mixigaming.com/' className={cx('link-lookall')}>
                                 <span style={{ fontSize: '1.8rem', fontWeight: '600' }}>Xem tất cả</span>
                             </a>
@@ -78,8 +87,8 @@ function Products() {
                         </div>
                         <div className={cx('box-text-seemore')}>
                             <a href="https://shop.mixigaming.com/danh-muc/do-luu-niem-mixi/">
-                                <span className={cx('see-more')}>XEM THÊM </span>
-                                <FontAwesomeIcon className={cx('item-right')} icon={faAngleRight} />
+                                <p className={cx('see-more')}>XEM THÊM
+                                    <FontAwesomeIcon className={cx('item-right')} icon={faAngleRight} /></p>
                             </a>
                         </div>
                     </div>
