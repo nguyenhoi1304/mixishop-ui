@@ -1,15 +1,12 @@
 import { faAngleRight } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import classNames from 'classnames/bind';
-import { useState } from 'react';
 
-import CategoryHeader from '../CategoryHeader/CategoryHeader';
+import CategoryHeader from '~/layouts/components/Header/Products/CategoryHeader';
 // import { Link } from 'react-router-dom';
 import styles from './Products.module.scss'
 
 const cx = classNames.bind(styles);
-
-
 
 const ProductsImg = [
     {
@@ -24,7 +21,6 @@ const ProductsImg = [
 ]
 
 function Products() {
-
     return (
 
         <>

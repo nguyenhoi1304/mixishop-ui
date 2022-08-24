@@ -58,10 +58,8 @@ const listproducts = [
 ]
 
 
-function CategoryHeader(onHandleChange) {
-    const handleChangeHeader = (item) => {
-        onHandleChange(item.babel)
-    }
+function CategoryHeader() {
+
     return (
         <div className={cx('products-list')}>
             <ul className={cx('item-list')}>
@@ -70,7 +68,7 @@ function CategoryHeader(onHandleChange) {
                     <div className={cx('item')} key={index}>
                         <FontAwesomeIcon icon={faAngleRight} />
                         <li className={cx('item-products')}
-                            onClick={() => handleChangeHeader(item)}
+
                         >
                             {item.title}
                             {item.trend && <span className={cx([item.trend.class])}>{item.trend.content}</span>}

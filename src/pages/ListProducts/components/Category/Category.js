@@ -1,7 +1,6 @@
 import classNames from "classnames/bind";
 import styles from './Category.module.scss'
 import { faAngleRight } from '@fortawesome/free-solid-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { memo } from 'react'
 
 const cx = classNames.bind(styles)
@@ -11,15 +10,6 @@ const listproducts = [
         label: 'all'
     },
     {
-        title: 'Đồ lưu niệm Mixi',
-        icon: faAngleRight,
-        trend: {
-            content: 'HOT',
-            class: 'red',
-        },
-        label: 'gift'
-    },
-    {
         title: 'Áo Mixi',
         icon: faAngleRight,
         trend: {
@@ -27,6 +17,15 @@ const listproducts = [
             class: 'blue',
         },
         label: 'shirt'
+    },
+    {
+        title: 'Đồ lưu niệm Mixi',
+        icon: faAngleRight,
+        trend: {
+            content: 'HOT',
+            class: 'red',
+        },
+        label: 'gift'
     },
     {
         title: 'Áo ba lỗ',
@@ -65,7 +64,7 @@ function Category({ onHandleChange }) {
             <ul className={cx('item-list')}>
                 <p className={cx('title-list')} >Danh mục sản phẩm</p>
                 {listproducts.map((item, index) => (
-                    <div className={cx('item')} key={index}><FontAwesomeIcon icon={faAngleRight} />
+                    <div className={cx('item')} key={index}>
                         <li className={cx('item-products')} onClick={() => handleChange(item)}>
                             {item.title}
 
