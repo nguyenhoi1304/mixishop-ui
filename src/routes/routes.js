@@ -21,6 +21,13 @@ const publicRoutes = [
     { path: config.routes.search, component: Search, layout: null },
     { path: config.routes.notification, component: Notification },
     { path: config.routes.listProducts.list, component: ListProducts },
+    { path: config.routes.listProducts.souvenir, component: ListProducts },
+    { path: config.routes.listProducts.mixishirt, component: ListProducts },
+    { path: config.routes.listProducts.baloshirt, component: ListProducts },
+    { path: config.routes.listProducts.CSGOshirt, component: ListProducts },
+    { path: config.routes.listProducts.PUBGshirt, component: ListProducts },
+    { path: config.routes.listProducts.refundshirt, component: ListProducts },
+
 
 
 ]

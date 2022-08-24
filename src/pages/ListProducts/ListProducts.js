@@ -8,8 +8,7 @@ import styles from './ListProducts.module.scss';
 import { makeStyles } from '@material-ui/core/styles';
 import Slider from '@material-ui/core/Slider';
 import Category from '~/pages/ListProducts/components/Category';
-import ProductsPages from '~/pages/ListProducts/components/ProductsPages';
-
+import List from '~/pages/ListProducts/components/List';
 const useStyles = makeStyles({
     root: {
         width: 300,
@@ -48,6 +47,7 @@ const filterResults = [
 
 ]
 
+
 function ListProducts() {
     const classes = useStyles();
     const [value, setValue] = useState([170000, 1499000]);
@@ -57,6 +57,13 @@ function ListProducts() {
     };
     const [showitem, setShowItem] = useState('false');
 
+    // show sản phẩm với danh sách
+    const [label, setLabel] = useState('all');
+
+    const onHandleChange = (value) => {
+        setLabel(value)
+
+    }
 
     return (
         <div className={cx('listProducts')} >
@@ -113,10 +120,9 @@ function ListProducts() {
                             <button className={cx('filter-btn')}>Lọc</button>
                         </div>
                     </div>
-                    <Category />
+                    <Category onHandleChange={value => onHandleChange(value)} />
                 </div>
-
-                <ProductsPages />
+                <List label={label} />
             </div>
         </div>
     );

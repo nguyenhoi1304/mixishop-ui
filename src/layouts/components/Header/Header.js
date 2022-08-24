@@ -10,7 +10,7 @@ import Tippy from '@tippyjs/react';
 import 'tippy.js/dist/tippy.css';
 import Search from '../Search';
 import { useEffect, useRef, useState } from 'react';
-import Products from '../Products';
+import Products from './Products';
 
 
 const cx = classNames.bind(styles)

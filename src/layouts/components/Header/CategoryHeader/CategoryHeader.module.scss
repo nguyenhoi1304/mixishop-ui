@@ -1,6 +1,7 @@
 .products-list {
     position: relative;
     display: flex;
+    padding-left: 18px;
     align-items: center;
     color: #000;
     font-size: 1.4rem;
@@ -22,6 +23,8 @@
     cursor: text;
 
 }
+
+
 
 .item {
     display: flex;

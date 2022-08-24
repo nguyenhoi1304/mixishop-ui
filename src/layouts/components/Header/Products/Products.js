@@ -1,8 +1,9 @@
 import { faAngleRight } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import classNames from 'classnames/bind';
+import { useState } from 'react';
 
-import Category from '../../../pages/ListProducts/components/Category/Category';
+import CategoryHeader from '../CategoryHeader/CategoryHeader';
 // import { Link } from 'react-router-dom';
 import styles from './Products.module.scss'
 
@@ -23,12 +24,13 @@ const ProductsImg = [
 ]
 
 function Products() {
+
     return (
 
         <>
             <div className={cx('container')} >
                 <div style={{ display: 'flex' }}>
-                    <Category />
+                    <CategoryHeader />
                     <div style={{ display: 'flex' }}>
                         {ProductsImg.map((item, key) => (
                             <div className={cx('products-lego')} key={key}>

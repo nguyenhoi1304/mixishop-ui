@@ -1,6 +1,6 @@
 import Banner from "~/layouts/components/Banner";
 import Feedback from '~/layouts/components/Feedback/Feedback';
-import ProductsPages from "~/pages/ListProducts/components/ProductsPages";
+import ProductsPages from "~/pages/Home/ProductsPages";
 
 
 function Home() {

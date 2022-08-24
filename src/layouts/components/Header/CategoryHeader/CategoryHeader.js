@@ -1,15 +1,13 @@
 import classNames from "classnames/bind";
-import styles from './Category.module.scss'
+import styles from './CategoryHeader.module.scss'
+
 import { faAngleRight } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { memo } from 'react'
 
 const cx = classNames.bind(styles)
 const listproducts = [
-    {
-        title: 'Tất cả sản phẩm',
-        label: 'all'
-    },
+
     {
         title: 'Đồ lưu niệm Mixi',
         icon: faAngleRight,
@@ -17,7 +15,7 @@ const listproducts = [
             content: 'HOT',
             class: 'red',
         },
-        label: 'gift'
+        label: 'gift',
     },
     {
         title: 'Áo Mixi',
@@ -26,7 +24,8 @@ const listproducts = [
             content: 'NEW',
             class: 'blue',
         },
-        label: 'shirt'
+        label: 'shirt',
+
     },
     {
         title: 'Áo ba lỗ',
@@ -35,47 +34,54 @@ const listproducts = [
             content: 'POP',
             class: 'green',
         },
-        label: 'shirtbalo'
+        label: 'shirtbalo',
+
     },
     {
         title: 'Áo CSGO ',
         icon: faAngleRight,
-        label: 'shirtCSGO'
+        label: 'shirtCSGO',
+
     },
     {
         title: 'Áo PUBG',
         icon: faAngleRight,
-        label: 'shirtPUBG'
+        label: 'shirtPUBG',
+
     },
     {
         title: 'Áo Refund Gaming',
         icon: faAngleRight,
-        label: 'shirtRefund'
+        label: 'shirtRefund',
     },
 
 ]
 
-function Category({ onHandleChange }) {
 
-    const handleChange = (item) => {
-        onHandleChange(item.label)
+function CategoryHeader(onHandleChange) {
+    const handleChangeHeader = (item) => {
+        onHandleChange(item.babel)
     }
     return (
         <div className={cx('products-list')}>
             <ul className={cx('item-list')}>
                 <p className={cx('title-list')} >Danh mục sản phẩm</p>
                 {listproducts.map((item, index) => (
-                    <div className={cx('item')} key={index}><FontAwesomeIcon icon={faAngleRight} />
-                        <li className={cx('item-products')} onClick={() => handleChange(item)}>
+                    <div className={cx('item')} key={index}>
+                        <FontAwesomeIcon icon={faAngleRight} />
+                        <li className={cx('item-products')}
+                            onClick={() => handleChangeHeader(item)}
+                        >
                             {item.title}
-
                             {item.trend && <span className={cx([item.trend.class])}>{item.trend.content}</span>}
                         </li>
                     </div>
                 ))}
+
+
             </ul>
         </div>
     );
 }
 
-export default memo(Category);
+export default memo(CategoryHeader);
