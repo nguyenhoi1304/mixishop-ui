@@ -4,8 +4,10 @@ import classNames from 'classnames/bind';
 const cx = classNames.bind(styles)
 
 function Privacypolicy() {
+
+
     return (
-        <div className={cx('privacypolicy')}>
+        <div className={cx('privacypolicy')} >
             <h2>Chúng tôi là ai</h2>
             <p>Địa chỉ website là: https://shop.mixigaming.com.</p>
             <h2>Thông tin cá nhân nào bị thu thập và tại sao thu thập</h2>

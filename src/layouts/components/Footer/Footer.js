@@ -76,10 +76,17 @@ function Footer() {
 
             },
         ]
+        const handlerUppolicy = () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth',
+            })
+        }
         return (
+
             <ul>
                 {informations.map((item, key) => (
-                    <Link to={item.link}><li className={cx('list-products')} key={key}>{item.info}</li></Link>
+                    <Link to={item.link}><li className={cx('list-products')} key={key} onClick={handlerUppolicy}>{item.info}</li></Link>
 
 
 
