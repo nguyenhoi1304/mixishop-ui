@@ -5,6 +5,9 @@ import FooterCol from "./FooterCol";
 import { faInstagram, faFacebook } from '@fortawesome/free-brands-svg-icons';
 import Tippy from '@tippyjs/react';
 import 'tippy.js/dist/tippy.css';
+import config from "~/config";
+import { Link } from "react-router-dom";
+
 
 const cx = classNames.bind(styles)
 function Footer() {
@@ -38,10 +41,12 @@ function Footer() {
         ]
         return (
             <>
+
                 <ul>
                     {categorys.map((item, index) => (
                         <li className={cx('list-products')}
                             key={index}
+
                         >{item.products}</li>
                     ))}
                 </ul>
@@ -53,21 +58,31 @@ function Footer() {
         const informations = [
             {
                 info: 'Giới thiệu',
+                link: config.routes.notification,
             },
             {
                 info: 'Chính sách bảo mật',
+                link: config.routes.privacypolicy,
+
             },
             {
                 info: 'Điều khoản',
+                link: config.routes.rules,
+
             },
             {
                 info: 'Sitemap',
+                link: config.routes.sitemap,
+
             },
         ]
         return (
             <ul>
                 {informations.map((item, key) => (
-                    <li className={cx('list-products')} key={key}>{item.info}</li>
+                    <Link to={item.link}><li className={cx('list-products')} key={key}>{item.info}</li></Link>
+
+
+
                 ))}
             </ul>
         )
