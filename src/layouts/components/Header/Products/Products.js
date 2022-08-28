@@ -1,6 +1,9 @@
 import { faAngleRight } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import classNames from 'classnames/bind';
+import { memo } from 'react';
+import { Link } from 'react-router-dom';
+import config from '~/config';
 
 import CategoryHeader from '~/layouts/components/Header/Products/CategoryHeader';
 // import { Link } from 'react-router-dom';
@@ -20,13 +23,16 @@ const ProductsImg = [
     },
 ]
 
-function Products() {
+
+
+function Products({ hanldeShow, closeList }) {
+
     return (
 
         <>
             <div className={cx('container')} >
                 <div style={{ display: 'flex' }}>
-                    <CategoryHeader />
+                    <CategoryHeader handleShowList={closeList} />
                     <div style={{ display: 'flex' }}>
                         {ProductsImg.map((item, key) => (
                             <div className={cx('products-lego')} key={key}>
@@ -34,10 +40,16 @@ function Products() {
                                     <img src={item.link} alt="legomixi" className={cx('img-legomixi')}></img>
                                 </div>
                                 <div className={cx('box-text-seemore')}>
-                                    <a href="https://shop.mixigaming.com/danh-muc/do-luu-niem-mixi/">
-                                        <p className={cx('see-more')}>XEM THÊM
-                                            <FontAwesomeIcon className={cx('item-right')} icon={faAngleRight} /></p>
-                                    </a>
+
+                                    <Link to={config.routes.danhmuc}>
+                                        <p className={cx('see-more')}
+                                            onClick={hanldeShow}
+                                        >
+                                            XEM THÊM
+                                            <FontAwesomeIcon className={cx('item-right')} icon={faAngleRight} />
+                                        </p>
+                                    </Link>
+
                                 </div>
                             </div>
                         ))}
@@ -54,4 +66,4 @@ function Products() {
     );
 }
 
-export default Products;
+export default memo(Products);

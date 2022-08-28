@@ -3,7 +3,7 @@ import HeadlessTippy from '@tippyjs/react/headless'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import classNames from 'classnames/bind';
 import styles from './Search.module.scss'
-import { useEffect, useState, useRef } from 'react';
+import { useEffect, useState, useRef, memo } from 'react';
 import { useDebounce } from '~/Hooks';
 import * as SearchServices from '~/services/SearchService';
 
@@ -94,4 +94,4 @@ function Search() {
     );
 }
 
-export default Search;
+export default memo(Search);

@@ -78,6 +78,13 @@ function Header() {
         return () => window.removeEventListener('scroll', onScroll);
     }, []);
 
+    const handleup = () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth',
+        })
+    }
+
     return (
         <div>
             {showSearch && (<div className={cx('modal')}>
@@ -123,11 +130,16 @@ function Header() {
                                     </div>
                                     <div className={cx(['product-list', offset > 750 && 'list-products-change'])}
                                     >
-                                        {showitem && <Products />}
-                                    </div>
+                                        {showitem && <Products show={showitem} hanldeShow={() => setShowItem(false)}
 
+                                            closeList={() => setShowItem(false)}
+                                        />}
+                                    </div>
                                 </div>
-                                <Link to={config.routes.notification} className={cx('header-link')}>THÔNG BÁO</Link>
+
+                                <Link to={config.routes.notification} className={cx('header-link')}
+
+                                ><p onClick={handleup}>THÔNG BÁO</p></Link>
 
                             </div>
                         </div>

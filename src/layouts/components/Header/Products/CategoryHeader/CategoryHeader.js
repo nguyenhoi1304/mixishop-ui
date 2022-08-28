@@ -4,6 +4,8 @@ import styles from './CategoryHeader.module.scss'
 import { faAngleRight } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { memo } from 'react'
+import { Link } from "react-router-dom";
+import config from "~/config";
 
 const cx = classNames.bind(styles)
 const listproducts = [
@@ -16,6 +18,7 @@ const listproducts = [
             class: 'red',
         },
         label: 'gift',
+        link: config.routes.listProducts.souvenir,
     },
     {
         title: 'Áo Mixi',
@@ -25,6 +28,7 @@ const listproducts = [
             class: 'blue',
         },
         label: 'shirt',
+        link: config.routes.listProducts.mixishirt,
 
     },
     {
@@ -35,30 +39,35 @@ const listproducts = [
             class: 'green',
         },
         label: 'shirtbalo',
+        link: config.routes.listProducts.baloshirt,
 
     },
     {
         title: 'Áo CSGO ',
         icon: faAngleRight,
         label: 'shirtCSGO',
+        link: config.routes.listProducts.CSGOshirt,
 
     },
     {
         title: 'Áo PUBG',
         icon: faAngleRight,
         label: 'shirtPUBG',
+        link: config.routes.listProducts.PUBGshirt,
 
     },
     {
         title: 'Áo Refund Gaming',
         icon: faAngleRight,
         label: 'shirtRefund',
+        link: config.routes.listProducts.refundshirt,
+
     },
 
 ]
 
 
-function CategoryHeader() {
+function CategoryHeader({ handleShowList }) {
 
     return (
         <div className={cx('products-list')}>
@@ -67,18 +76,20 @@ function CategoryHeader() {
                 {listproducts.map((item, index) => (
                     <div className={cx('item')} key={index}>
                         <FontAwesomeIcon icon={faAngleRight} />
-                        <li className={cx('item-products')}
-
-                        >
-                            {item.title}
-                            {item.trend && <span className={cx([item.trend.class])}>{item.trend.content}</span>}
-                        </li>
+                        <Link to={item.link}>
+                            <li className={cx('item-products')}
+                                onClick={handleShowList}
+                            >
+                                {item.title}
+                                {item.trend && <span className={cx([item.trend.class])}>{item.trend.content}</span>}
+                            </li>
+                        </Link>
                     </div>
-                ))}
+                ))
+                }
 
-
-            </ul>
-        </div>
+            </ul >
+        </div >
     );
 }
 

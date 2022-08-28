@@ -52,6 +52,7 @@ function ListProducts() {
     const classes = useStyles();
     const [value, setValue] = useState([170000, 1499000]);
 
+
     const handleChange = (event, newValue) => {
         setValue(newValue);
     };
@@ -64,6 +65,7 @@ function ListProducts() {
         setLabel(value)
 
     }
+
 
     return (
         <div className={cx('listProducts')} >
@@ -120,9 +122,12 @@ function ListProducts() {
                             <button className={cx('filter-btn')}>Lọc</button>
                         </div>
                     </div>
-                    <Category onHandleChange={value => onHandleChange(value)} />
+                    <Category onHandleChange={value => onHandleChange(value)}
+                    />
                 </div>
-                <List label={label} />
+                <List
+                    label={label}
+                />
             </div>
         </div>
     );

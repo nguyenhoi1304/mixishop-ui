@@ -46,7 +46,6 @@ function Footer() {
                     {categorys.map((item, index) => (
                         <li className={cx('list-products')}
                             key={index}
-
                         >{item.products}</li>
                     ))}
                 </ul>
@@ -85,11 +84,8 @@ function Footer() {
         return (
 
             <ul>
-                {informations.map((item, key) => (
-                    <Link to={item.link}><li className={cx('list-products')} key={key} onClick={handlerUppolicy}>{item.info}</li></Link>
-
-
-
+                {informations.map((item, index) => (
+                    <Link key={index} to={item.link}><li className={cx('list-products')} onClick={handlerUppolicy}>{item.info}</li></Link>
                 ))}
             </ul>
         )

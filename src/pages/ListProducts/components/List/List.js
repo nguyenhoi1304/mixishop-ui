@@ -3,6 +3,7 @@ import classNames from 'classnames/bind';
 import { faStar } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { memo } from 'react'
+import config from "~/config";
 
 const cx = classNames.bind(styles)
 
@@ -15,6 +16,8 @@ const productsShowAPI = [
         price: 370000,
         describe: 'Bộ Ghép Hình Mixi – Mixi Block SS4',
         name: 'ĐỒ LƯU NIỆM MIXI',
+        link: config.routes.listProducts.souvenir,
+
 
     }, {
         img: 'https://shop.mixigaming.com/wp-content/uploads/2022/06/NMD_8355-300x400.jpg',
@@ -24,6 +27,7 @@ const productsShowAPI = [
         price: 370000,
         describe: 'Bộ Ghép Hình Mixi – Mixi Block SS3',
         name: 'ĐỒ LƯU NIỆM MIXI',
+        link: config.routes.listProducts.souvenir,
 
     }, {
         imgchange: 'https://shop.mixigaming.com/wp-content/uploads/2021/01/lego-mixi-300x400.jpg',
@@ -33,6 +37,8 @@ const productsShowAPI = [
         price: 350000,
         describe: 'Bộ Ghép Hình Mixi – Mixi Block SS1',
         name: 'ĐỒ LƯU NIỆM MIXI',
+        link: config.routes.listProducts.souvenir,
+
     }, {
         imgchange: 'https://shop.mixigaming.com/wp-content/uploads/2021/11/NM_D9485-300x400.jpg',
         img: 'https://shop.mixigaming.com/wp-content/uploads/2021/11/NM_D9499-300x400.jpg',
@@ -41,6 +47,8 @@ const productsShowAPI = [
         price: 350000,
         describe: 'Bộ Ghép Hình Mixi – Mixi Block SS2',
         name: 'ĐỒ LƯU NIỆM MIXI',
+        link: config.routes.listProducts.souvenir,
+
     }, {
         img: 'https://shop.mixigaming.com/wp-content/uploads/2022/02/VUVU4674-300x400.jpg',
         imgchange: 'https://shop.mixigaming.com/wp-content/uploads/2022/02/VUVU4667-300x400.jpg',
@@ -49,6 +57,8 @@ const productsShowAPI = [
         price: 170000,
         describe: 'Pad chuột MixiGaming',
         name: 'ĐỒ LƯU NIỆM MIXI',
+        link: config.routes.listProducts.souvenir,
+
     }, {
         img: 'https://shop.mixigaming.com/wp-content/uploads/2021/01/binh-giu-nhiet-mixi-2-300x400.jpg',
         imgchange: 'https://shop.mixigaming.com/wp-content/uploads/2021/01/binh-giu-nhiet-mixi-300x400.jpg',
@@ -57,6 +67,8 @@ const productsShowAPI = [
         price: 270000,
         describe: 'Bình Giữ Nhiệt Fan Cứng Mixi',
         name: 'ĐỒ LƯU NIỆM MIXI',
+        link: config.routes.listProducts.souvenir,
+
     },
     {
         img: 'https://shop.mixigaming.com/wp-content/uploads/2019/07/c%E1%BB%91c-gi%E1%BB%AF-nhi%E1%BB%87t-mixi-2-scaled-300x400.jpg',
@@ -66,6 +78,8 @@ const productsShowAPI = [
         price: 570000,
         describe: 'Cốc giữ nhiệt Mixi – độ bền cao, khả năng giữ nhiệt tốt',
         name: 'ĐỒ LƯU NIỆM MIXI',
+        link: config.routes.listProducts.souvenir,
+
     },
     {
         img: 'https://shop.mixigaming.com/wp-content/uploads/2019/07/d%C3%A9p-mixi-1-scaled-300x400.jpg',
@@ -75,6 +89,8 @@ const productsShowAPI = [
         price: 370000,
         describe: 'Dép MixiGaming màu đen trắng quai ngang',
         name: 'ĐỒ LƯU NIỆM MIXI',
+        link: config.routes.listProducts.souvenir,
+
     },
     {
         img: 'https://shop.mixigaming.com/wp-content/uploads/2019/06/v%C3%AD-mixi-5-scaled-300x400.jpg',
@@ -84,6 +100,8 @@ const productsShowAPI = [
         price: 670000,
         describe: 'Ví Mixi Handmade hàng Limited Edition',
         name: 'ĐỒ LƯU NIỆM MIXI',
+        link: config.routes.listProducts.souvenir,
+
     }, {
         img: 'https://shop.mixigaming.com/wp-content/uploads/2022/02/VUVU4680-300x400.jpg',
         imgchange: 'https://shop.mixigaming.com/wp-content/uploads/2022/02/apcitylogoden-300x400.jpg',
