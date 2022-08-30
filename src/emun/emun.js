@@ -1,1 +1,1 @@
-export * from './callPageProduct'
+export * from './callProductAction'

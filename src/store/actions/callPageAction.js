@@ -1,10 +1,10 @@
 
-import { callPageProduct } from "~/emun/emun"
+import { callProductAction } from "~/emun/emun"
 
 
-export const callPageAction = (label) => {
+export const callProductActions = (label) => {
     return {
-        type: callPageProduct.callPageProduct,
+        type: callProductAction.callProductAction,
         payload: label,
     }
 }

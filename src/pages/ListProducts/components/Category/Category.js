@@ -3,7 +3,7 @@ import styles from './Category.module.scss'
 import { faAngleRight } from '@fortawesome/free-solid-svg-icons';
 import { memo } from 'react'
 import { useDispatch } from "react-redux";
-import { callPageAction } from "~/store/actions/callPageAction";
+import { callProductActions } from "~/store/actions/callPageAction";
 import { useNavigate } from "react-router-dom";
 
 
@@ -72,7 +72,7 @@ function Category({ onHandleChange }) {
 
     const handleChange = (item) => {
         onHandleChange(item.label)
-        const action = callPageAction(item.label);
+        const action = callProductActions(item.label);
         history('/danh-muc')
 
         dispatch(action);

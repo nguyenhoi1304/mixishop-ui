@@ -6,7 +6,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { memo } from 'react'
 import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
-import { callPageAction } from "~/store/actions/callPageAction";
+import { callProductActions } from "~/store/actions/callPageAction";
 
 const cx = classNames.bind(styles)
 const listproducts = [
@@ -70,7 +70,7 @@ function CategoryHeader({ handleShowList }) {
 
     const handleShowProduct = (label) => {
 
-        const action = callPageAction(label);
+        const action = callProductActions(label);
         dispatch(action);
         history('/danh-muc')
         handleShowList()

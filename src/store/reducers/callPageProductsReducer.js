@@ -1,5 +1,5 @@
 
-import { callPageProduct } from "~/emun/emun"
+import { callProductAction } from "~/emun/emun"
 
 const initState = {
     label: 'all',
@@ -8,7 +8,7 @@ const initState = {
 
 const callPageProductsReducer = (state = initState, action) => {
     switch (action.type) {
-        case callPageProduct.callPageProduct:
+        case callProductAction.callProductAction:
             return {
                 ...state,
                 label: (action.payload)

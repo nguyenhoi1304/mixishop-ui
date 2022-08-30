@@ -8,7 +8,7 @@ import 'tippy.js/dist/tippy.css';
 import config from "~/config";
 import { Link, useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
-import { callPageAction } from "~/store/actions/callPageAction";
+import { callProductActions } from "~/store/actions/callPageAction";
 
 const cx = classNames.bind(styles)
 function Footer() {
@@ -61,7 +61,7 @@ function Footer() {
                 top: 0,
                 behavior: 'auto',
             })
-            const action = callPageAction(item.label)
+            const action = callProductActions(item.label)
             history('/danh-muc')
             dispatch(action)
 
