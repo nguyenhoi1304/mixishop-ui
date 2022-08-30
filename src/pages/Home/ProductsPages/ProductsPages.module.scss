@@ -9,9 +9,13 @@
 }
 
 .List-products {
-    width: 25%;
+    width: 20%;
     padding:  10px;
     cursor: pointer;
+    display: flex;
+    text-align: center;
+    justify-content: space-around;
+
 }
 
 
@@ -19,10 +23,13 @@
     position: relative;
     height: auto;
     overflow: hidden;
+    
 }
 .box-hover .lego {
     max-width: 100%;
     transition: all 1s;
+    display: flex;
+    text-align: center;
 }
 
 .box-hover .img-change {

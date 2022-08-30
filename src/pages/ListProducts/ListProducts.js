@@ -9,7 +9,6 @@ import { makeStyles } from '@material-ui/core/styles';
 import Slider from '@material-ui/core/Slider';
 import Category from '~/pages/ListProducts/components/Category';
 import List from '~/pages/ListProducts/components/List';
-import { useSelector } from 'react-redux';
 
 const useStyles = makeStyles({
     root: {

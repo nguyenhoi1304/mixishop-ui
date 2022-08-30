@@ -2,7 +2,6 @@ import { faAngleRight } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import classNames from 'classnames/bind';
 import { memo } from 'react';
-import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import config from '~/config';
 
@@ -57,9 +56,9 @@ function Products({ hanldeShow }) {
                 </div>
 
                 <div className={cx('btn-see-all')}>
-                    <a href='https://shop.mixigaming.com/' className={cx('link-lookall')}>
+                    <Link to={config.routes.danhmuc} className={cx('link-lookall')}>
                         <span style={{ fontSize: '1.8rem', fontWeight: '600' }}>Xem tất cả</span>
-                    </a>
+                    </Link>
                 </div>
             </div>
         </>

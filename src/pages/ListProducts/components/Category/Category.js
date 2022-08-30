@@ -71,6 +71,7 @@ function Category({ onHandleChange }) {
     const dispatch = useDispatch()
 
     const handleChange = (item) => {
+        
         onHandleChange(item.label)
         const action = callProductActions(item.label);
         history('/danh-muc')
@@ -86,7 +87,7 @@ function Category({ onHandleChange }) {
                 {listproducts.map((item, index) => (
                     <div key={index}>
                         <div className={cx('item')} >
-                            <li className={cx('item-products')} onClick={() => handleChange(item)}>
+                            <li className={cx('item-products', 'active')} onClick={() => handleChange(item)}>
                                 {item.title}
                                 {item.trend && <span className={cx([item.trend.class])}>{item.trend.content}</span>}
                             </li>
