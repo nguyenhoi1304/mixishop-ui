@@ -2,6 +2,7 @@ import { faAngleRight } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import classNames from 'classnames/bind';
 import { memo } from 'react';
+import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import config from '~/config';
 
@@ -25,14 +26,14 @@ const ProductsImg = [
 
 
 
-function Products({ hanldeShow, closeList }) {
+function Products({ hanldeShow }) {
 
     return (
 
         <>
             <div className={cx('container')} >
                 <div style={{ display: 'flex' }}>
-                    <CategoryHeader handleShowList={closeList} />
+                    <CategoryHeader handleShowList={hanldeShow} />
                     <div style={{ display: 'flex' }}>
                         {ProductsImg.map((item, key) => (
                             <div className={cx('products-lego')} key={key}>
@@ -49,7 +50,6 @@ function Products({ hanldeShow, closeList }) {
                                             <FontAwesomeIcon className={cx('item-right')} icon={faAngleRight} />
                                         </p>
                                     </Link>
-
                                 </div>
                             </div>
                         ))}

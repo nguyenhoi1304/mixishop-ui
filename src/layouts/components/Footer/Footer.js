@@ -6,11 +6,13 @@ import { faInstagram, faFacebook } from '@fortawesome/free-brands-svg-icons';
 import Tippy from '@tippyjs/react';
 import 'tippy.js/dist/tippy.css';
 import config from "~/config";
-import { Link } from "react-router-dom";
-
+import { Link, useNavigate } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { callPageAction } from "~/store/actions/callPageAction";
 
 const cx = classNames.bind(styles)
 function Footer() {
+
     function AboutUs() {
         return (
             <div className={cx('about-us')}>
@@ -22,29 +24,56 @@ function Footer() {
         const categorys = [
             {
                 products: 'Áo CSGO',
+                label: 'shirtCSGO',
+
             },
             {
                 products: 'Áo Mixi',
+                label: 'shirt',
+
             },
             {
                 products: 'Áo PUBG',
+                label: 'shirtPUBG',
+
             },
             {
                 products: 'Áo Refund Gaming',
+                label: 'shirtRefund',
+
             },
             {
                 products: 'ĐỒ lưu niệm Mixi',
+                label: 'gift',
+
             },
             {
                 products: 'Áo ba lỗ',
+                label: 'shirtbalo',
+
             },
         ]
+        const dispatch = useDispatch()
+        const history = useNavigate()
+
+        const handlerShowProducts = (item) => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'auto',
+            })
+            const action = callPageAction(item.label)
+            history('/danh-muc')
+            dispatch(action)
+
+        }
+
         return (
             <>
 
                 <ul>
                     {categorys.map((item, index) => (
                         <li className={cx('list-products')}
+                            onClick={() => handlerShowProducts(item)}
                             key={index}
                         >{item.products}</li>
                     ))}

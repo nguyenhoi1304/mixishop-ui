@@ -4,8 +4,9 @@ import styles from './CategoryHeader.module.scss'
 import { faAngleRight } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { memo } from 'react'
-import { Link } from "react-router-dom";
-import config from "~/config";
+import { useNavigate } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { callPageAction } from "~/store/actions/callPageAction";
 
 const cx = classNames.bind(styles)
 const listproducts = [
@@ -18,7 +19,6 @@ const listproducts = [
             class: 'red',
         },
         label: 'gift',
-        link: config.routes.listProducts.souvenir,
     },
     {
         title: 'Áo Mixi',
@@ -28,7 +28,6 @@ const listproducts = [
             class: 'blue',
         },
         label: 'shirt',
-        link: config.routes.listProducts.mixishirt,
 
     },
     {
@@ -39,28 +38,24 @@ const listproducts = [
             class: 'green',
         },
         label: 'shirtbalo',
-        link: config.routes.listProducts.baloshirt,
 
     },
     {
         title: 'Áo CSGO ',
         icon: faAngleRight,
         label: 'shirtCSGO',
-        link: config.routes.listProducts.CSGOshirt,
 
     },
     {
         title: 'Áo PUBG',
         icon: faAngleRight,
         label: 'shirtPUBG',
-        link: config.routes.listProducts.PUBGshirt,
 
     },
     {
         title: 'Áo Refund Gaming',
         icon: faAngleRight,
         label: 'shirtRefund',
-        link: config.routes.listProducts.refundshirt,
 
     },
 
@@ -69,6 +64,19 @@ const listproducts = [
 
 function CategoryHeader({ handleShowList }) {
 
+    const history = useNavigate()
+    const dispatch = useDispatch()
+
+
+    const handleShowProduct = (label) => {
+
+        const action = callPageAction(label);
+        dispatch(action);
+        history('/danh-muc')
+        handleShowList()
+    }
+
+
     return (
         <div className={cx('products-list')}>
             <ul className={cx('item-list')}>
@@ -76,14 +84,13 @@ function CategoryHeader({ handleShowList }) {
                 {listproducts.map((item, index) => (
                     <div className={cx('item')} key={index}>
                         <FontAwesomeIcon icon={faAngleRight} />
-                        <Link to={item.link}>
-                            <li className={cx('item-products')}
-                                onClick={handleShowList}
-                            >
-                                {item.title}
-                                {item.trend && <span className={cx([item.trend.class])}>{item.trend.content}</span>}
-                            </li>
-                        </Link>
+                        <li className={cx('item-products')}
+                            onClick={() => handleShowProduct(item.label)}
+
+                        >
+                            {item.title}
+                            {item.trend && <span className={cx([item.trend.class])}>{item.trend.content}</span>}
+                        </li>
                     </div>
                 ))
                 }

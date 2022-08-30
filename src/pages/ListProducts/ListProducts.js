@@ -9,6 +9,8 @@ import { makeStyles } from '@material-ui/core/styles';
 import Slider from '@material-ui/core/Slider';
 import Category from '~/pages/ListProducts/components/Category';
 import List from '~/pages/ListProducts/components/List';
+import { useSelector } from 'react-redux';
+
 const useStyles = makeStyles({
     root: {
         width: 300,
@@ -51,24 +53,29 @@ const filterResults = [
 function ListProducts() {
     const classes = useStyles();
     const [value, setValue] = useState([170000, 1499000]);
+    const [label, setLabel] = useState('all');
+
+
+
+
+    // show sản phẩm với danh sách
+    const [showitem, setShowItem] = useState('false');
 
 
     const handleChange = (event, newValue) => {
         setValue(newValue);
     };
-    const [showitem, setShowItem] = useState('false');
 
-    // show sản phẩm với danh sách
-    const [label, setLabel] = useState('all');
 
     const onHandleChange = (value) => {
         setLabel(value)
-
     }
 
 
+
+
     return (
-        <div className={cx('listProducts')} >
+        <div className={cx('listProducts')}  >
             <div className={cx('pageList')}>
                 <div>
                     <p style={{ fontWeight: '700', fontSize: '2.4rem', color: '#000' }}>ĐỒ LƯU NIỆM MIXI</p>
@@ -127,6 +134,7 @@ function ListProducts() {
                 </div>
                 <List
                     label={label}
+
                 />
             </div>
         </div>

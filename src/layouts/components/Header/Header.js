@@ -132,7 +132,6 @@ function Header() {
                                     >
                                         {showitem && <Products show={showitem} hanldeShow={() => setShowItem(false)}
 
-                                            closeList={() => setShowItem(false)}
                                         />}
                                     </div>
                                 </div>
