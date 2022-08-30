@@ -1,10 +1,9 @@
 import styles from './List.module.scss'
 import classNames from 'classnames/bind';
-import { faStar } from '@fortawesome/free-solid-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { memo } from 'react'
 import { useSelector } from "react-redux";
 import data from '~/data/data'
+import Rating from './Rating/Rating';
 const cx = classNames.bind(styles)
 
 function List() {
@@ -44,7 +43,7 @@ function List() {
                             <div className={cx('products-name')}>{item.name}</div>
                             <div className={cx('products-describe')}>{item.describe}</div>
                             <ul>
-                                <li><FontAwesomeIcon icon={faStar} /></li>
+                                <Rating />
                             </ul>
                             <p className={cx('products-price')}>
                                 {item.price.toLocaleString()}
