@@ -7,7 +7,7 @@ import 'rc-slider/assets/index.css';
 import styles from './ListProducts.module.scss';
 import { makeStyles } from '@material-ui/core/styles';
 import Slider from '@material-ui/core/Slider';
-import Category from '~/pages/ListProducts/components/Category';
+import Category from '~/pages/ListProducts/components/Sidebar';
 import List from '~/pages/ListProducts/components/List';
 
 const useStyles = makeStyles({
@@ -69,7 +69,7 @@ function ListProducts() {
     const onHandleChange = (value) => {
         setLabel(value)
     }
-
+    console.log(value[0])
 
 
 

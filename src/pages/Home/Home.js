@@ -1,13 +1,14 @@
 import Banner from "~/layouts/components/Banner";
 import Feedback from '~/layouts/components/Feedback/Feedback';
-import ProductsPages from "~/pages/Home/ProductsPages";
-
+import ProductsPagesItem from "./ProductsPages/ProductsPagesItem";
 
 function Home() {
+
     return (
         <>
             <Banner />
-            <ProductsPages />
+            <ProductsPagesItem />
+
             <Feedback />
         </>
 

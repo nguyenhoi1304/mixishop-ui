@@ -130,6 +130,8 @@ function Header() {
                                     </div>
                                     <div className={cx(['product-list', offset > 750 && 'list-products-change'])}
                                     >
+
+                                        {/* show Products */}
                                         {showitem && <Products show={showitem} hanldeShow={() => setShowItem(false)}
 
                                         />}

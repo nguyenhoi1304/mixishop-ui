@@ -74,8 +74,28 @@
 
 .products-information {
     text-align: center;
+    margin-top: 10px;
 }
 
 .products-price {
     font-weight: 600;
+}
+
+.pagination {
+    justify-content: center;
+    background-color: #f0f0f0;
+    display: flex;
+    align-items: center;
+    font-size: 2rem;
+}
+
+.btn__page {
+    padding: 15px 10px;
+    margin: 10px 10px;
+    cursor: pointer;
+    color: #333;
+    font-size: 1.8rem;
+    &:hover {
+        color: #007784;
+    }
 }

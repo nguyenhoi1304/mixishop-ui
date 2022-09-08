@@ -4,26 +4,13 @@ import classNames from 'classnames/bind';
 import { memo } from 'react';
 import { Link } from 'react-router-dom';
 import config from '~/config';
+import sliderImg from '~/fakeApi/SliderImg'
 
 import CategoryHeader from '~/layouts/components/Header/Products/CategoryHeader';
 // import { Link } from 'react-router-dom';
 import styles from './Products.module.scss'
 
 const cx = classNames.bind(styles);
-
-const ProductsImg = [
-    {
-        link: 'https://shop.mixigaming.com/wp-content/uploads/2021/01/2-1536x1024.jpg'
-    },
-    {
-        link: "https://shop.mixigaming.com/wp-content/uploads/2021/11/NM_D9485-scaled.jpg"
-    },
-    {
-        link: 'https://shop.mixigaming.com/wp-content/uploads/2021/01/binh-giu-nhiet-mixi-4-1536x1024.jpg'
-    },
-]
-
-
 
 function Products({ hanldeShow }) {
 
@@ -34,10 +21,10 @@ function Products({ hanldeShow }) {
                 <div style={{ display: 'flex' }}>
                     <CategoryHeader handleShowList={hanldeShow} />
                     <div style={{ display: 'flex' }}>
-                        {ProductsImg.map((item, key) => (
+                        {sliderImg.map((item, key) => (
                             <div className={cx('products-lego')} key={key}>
                                 <div className={cx('item-lego')}>
-                                    <img src={item.link} alt="legomixi" className={cx('img-legomixi')}></img>
+                                    <img src={item.img} alt="legomixi" className={cx('img-legomixi')}></img>
                                 </div>
                                 <div className={cx('box-text-seemore')}>
 
@@ -56,8 +43,8 @@ function Products({ hanldeShow }) {
                 </div>
 
                 <div className={cx('btn-see-all')}>
-                    <Link to={config.routes.danhmuc} className={cx('link-lookall')}>
-                        <span style={{ fontSize: '1.8rem', fontWeight: '600' }}>Xem tất cả</span>
+                    <Link to={config.routes.danhmuc} className={cx('link-lookall')} onClick={hanldeShow}>
+                        <span style={{ fontSize: '1.8rem', fontWeight: '600' }} >Xem tất cả</span>
                     </Link>
                 </div>
             </div>

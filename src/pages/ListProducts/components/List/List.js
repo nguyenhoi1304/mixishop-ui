@@ -2,8 +2,8 @@ import styles from './List.module.scss'
 import classNames from 'classnames/bind';
 import { memo } from 'react'
 import { useSelector } from "react-redux";
-import data from '~/data/data'
-import Rating from './Rating/Rating';
+import data from '~/fakeApi/Products'
+import Rating from '~/layouts/components/Rating/Rating';
 const cx = classNames.bind(styles)
 
 function List() {
