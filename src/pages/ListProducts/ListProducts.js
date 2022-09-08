@@ -69,7 +69,6 @@ function ListProducts() {
     const onHandleChange = (value) => {
         setLabel(value)
     }
-    console.log(value[0])
 
 
 
@@ -79,9 +78,8 @@ function ListProducts() {
                 <div>
                     <p style={{ fontWeight: '700', fontSize: '2.4rem', color: '#000' }}>ĐỒ LƯU NIỆM MIXI</p>
                     <div className={cx('title')}>
-                        <a className={cx('link-home')} href={config.routes.home}>TRANG CHỦ</a>
-                        <span>/</span>
-                        <p style={{ fontWeight: '600', color: '#000', marginLeft: '4px' }}>ĐỒ LƯU NIỆM MIXI</p>
+                        <a className={cx('link-home')} href={config.routes.home}>TRANG CHỦ / <p style={{ fontWeight: '600', color: '#000', marginLeft: '4px' }}>{label}</p> </a>
+
                     </div>
                 </div>
                 <div className={cx('showsResult')} >
@@ -125,7 +123,7 @@ function ListProducts() {
                                     {`${value[0].toLocaleString()}₫ - ${value[1].toLocaleString()}₫`}
                                 </div>
                             </div>
-                            <button className={cx('filter-btn')}>Lọc</button>
+                            <button className={cx('filter-btn')} onClick={value}>Lọc</button>
                         </div>
                     </div>
                     <Category onHandleChange={value => onHandleChange(value)}
