@@ -59,9 +59,7 @@ function ProductsPagesItem() {
                                         </div>
                                     )
                                     }
-                                    <div className={cx('products-notification')}>
-                                        <span > Hết Hàng</span>
-                                    </div>
+                                  
                                     <img src={item.img} alt='legomixi' className={cx('lego')} />
                                 </div>
                             </div>
@@ -78,9 +76,8 @@ function ProductsPagesItem() {
 
                 }
             </div>
+
             {/* pagination */}
-
-
             <div className={cx('pagination')}>
                 <button
                     disabled={countPage <= 1}

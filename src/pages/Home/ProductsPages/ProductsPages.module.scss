@@ -6,6 +6,7 @@
     flex-wrap:wrap ;
     background-color: #f0f0f0;
     padding: 0 25px;
+  
 }
 
 .List-products {
@@ -23,7 +24,10 @@
     position: relative;
     height: auto;
     overflow: hidden;
-    
+    &:hover {
+        opacity: 0.8;
+        transition: 0.5;
+    }
 }
 .box-hover .lego {
     max-width: 100%;
@@ -44,6 +48,7 @@
 
 .box-item {
     position: relative;
+    
 }
 
 .sale {
