@@ -6,11 +6,10 @@
     flex-wrap:wrap ;
     background-color: #f0f0f0;
     padding: 0 25px;
-  
+    justify-content: space-around;
 }
 
 .List-products {
-    width: 20%;
     padding:  10px;
     cursor: pointer;
     display: flex;
