@@ -2,13 +2,14 @@ import styles from './List.module.scss'
 import classNames from 'classnames/bind';
 import { memo } from 'react'
 import { useSelector } from "react-redux";
-import data from '~/fakeApi/Products'
+import HomeProductsPageApi from '~/fakeApi/HomeProductsPageApi'
 import Rating from '~/layouts/components/Rating/Rating';
 const cx = classNames.bind(styles)
 
 function List() {
-    const result = useSelector(state => state.callPageProducts.label)
+    const data = HomeProductsPageApi.products
 
+    const result = useSelector(state => state.callPageProducts.label)
     const handleFilterProduct = (productList) => {
         if (result === 'all') {
             return productList

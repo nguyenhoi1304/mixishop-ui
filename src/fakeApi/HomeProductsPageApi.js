@@ -2,7 +2,7 @@
 
 const HomeProductsPageApi = {
     products: [
-        {   
+        {
             id: '1',
             img: 'https://shop.mixigaming.com/wp-content/uploads/2022/07/NMD13172-300x400.jpg',
             imgchange: 'https://shop.mixigaming.com/wp-content/uploads/2022/07/NMD13166-1-300x400.jpg',
@@ -16,7 +16,6 @@ const HomeProductsPageApi = {
             pagination: {
                 _page: 1,
                 _limit: 10,
-                _totalRows: 42,
             }
         }, {
             id: '2',
@@ -32,7 +31,6 @@ const HomeProductsPageApi = {
             pagination: {
                 _page: 1,
                 _limit: 10,
-                _totalRows: 42,
             }
         }, {
             id: '3',
@@ -48,7 +46,6 @@ const HomeProductsPageApi = {
             pagination: {
                 _page: 1,
                 _limit: 10,
-                _totalRows: 42,
             }
         }, {
             id: '4',
@@ -64,10 +61,9 @@ const HomeProductsPageApi = {
             pagination: {
                 _page: 1,
                 _limit: 10,
-                _totalRows: 42,
             }
-    
-    
+
+
         }, {
             id: '5',
             img: 'https://shop.mixigaming.com/wp-content/uploads/2022/02/VUVU4674-300x400.jpg',
@@ -82,11 +78,10 @@ const HomeProductsPageApi = {
             pagination: {
                 _page: 1,
                 _limit: 10,
-                _totalRows: 42,
             }
-    
-    
-    
+
+
+
         }, {
             id: '6',
             img: 'https://shop.mixigaming.com/wp-content/uploads/2021/01/binh-giu-nhiet-mixi-2-300x400.jpg',
@@ -101,9 +96,8 @@ const HomeProductsPageApi = {
             pagination: {
                 _page: 1,
                 _limit: 10,
-                _totalRows: 42,
             }
-    
+
         },
         {
             id: '7',
@@ -119,9 +113,8 @@ const HomeProductsPageApi = {
             pagination: {
                 _page: 1,
                 _limit: 10,
-                _totalRows: 42,
             }
-    
+
         },
         {
             id: '8',
@@ -137,9 +130,8 @@ const HomeProductsPageApi = {
             pagination: {
                 _page: 1,
                 _limit: 10,
-                _totalRows: 42,
             }
-    
+
         },
         {
             id: '9',
@@ -155,9 +147,8 @@ const HomeProductsPageApi = {
             pagination: {
                 _page: 1,
                 _limit: 10,
-                _totalRows: 42,
             }
-    
+
         }, {
             id: '10',
             img: 'https://shop.mixigaming.com/wp-content/uploads/2022/02/VUVU4680-300x400.jpg',
@@ -172,9 +163,8 @@ const HomeProductsPageApi = {
             pagination: {
                 _page: 1,
                 _limit: 10,
-                _totalRows: 42,
             }
-    
+
         }, {
             id: '11',
             img: 'https://shop.mixigaming.com/wp-content/uploads/2022/02/anicitylogoden-300x400.jpg',
@@ -188,9 +178,8 @@ const HomeProductsPageApi = {
             pagination: {
                 _page: 2,
                 _limit: 10,
-                _totalRows: 42,
             }
-    
+
         }, {
             id: '12',
             img: 'https://shop.mixigaming.com/wp-content/uploads/2022/02/anilogomixigamingden1-300x400.jpg',
@@ -205,9 +194,8 @@ const HomeProductsPageApi = {
             pagination: {
                 _page: 2,
                 _limit: 10,
-                _totalRows: 42,
             }
-    
+
         }, {
             id: '13',
             img: 'https://shop.mixigaming.com/wp-content/uploads/2022/02/anilogomxgden-300x400.jpg',
@@ -221,9 +209,8 @@ const HomeProductsPageApi = {
             pagination: {
                 _page: 2,
                 _limit: 10,
-                _totalRows: 42,
             }
-    
+
         }, {
             id: '14',
             img: 'https://shop.mixigaming.com/wp-content/uploads/2022/02/anilogomixigamingtrang2-300x400.jpg',
@@ -238,9 +225,8 @@ const HomeProductsPageApi = {
             pagination: {
                 _page: 2,
                 _limit: 10,
-                _totalRows: 42,
             }
-    
+
         }, {
             id: '15',
             img: 'https://shop.mixigaming.com/wp-content/uploads/2022/02/VUVU4714-300x400.jpg',
@@ -255,9 +241,8 @@ const HomeProductsPageApi = {
             pagination: {
                 _page: 2,
                 _limit: 10,
-                _totalRows: 42,
             }
-    
+
         }, {
             id: '16',
             img: 'https://shop.mixigaming.com/wp-content/uploads/2022/02/aplogoheartden1-300x400.jpg',
@@ -272,9 +257,8 @@ const HomeProductsPageApi = {
             pagination: {
                 _page: 2,
                 _limit: 10,
-                _totalRows: 42,
             }
-    
+
         }, {
             id: '17',
             img: 'https://shop.mixigaming.com/wp-content/uploads/2022/02/apcitybigtrang2-300x400.jpg',
@@ -289,9 +273,8 @@ const HomeProductsPageApi = {
             pagination: {
                 _page: 2,
                 _limit: 10,
-                _totalRows: 42,
             }
-    
+
         }, {
             id: '18',
             img: 'https://shop.mixigaming.com/wp-content/uploads/2022/02/VUVU4676-300x400.jpg',
@@ -306,9 +289,8 @@ const HomeProductsPageApi = {
             pagination: {
                 _page: 2,
                 _limit: 10,
-                _totalRows: 42,
             }
-    
+
         }, {
             id: '19',
             img: 'https://shop.mixigaming.com/wp-content/uploads/2022/02/VUVU4694-300x400.jpg',
@@ -323,9 +305,8 @@ const HomeProductsPageApi = {
             pagination: {
                 _page: 2,
                 _limit: 10,
-                _totalRows: 42,
             }
-    
+
         }, {
             id: '20',
             img: 'https://shop.mixigaming.com/wp-content/uploads/2021/01/Ao-ba-lo-Mixi-BVCBG-300x400.jpg',
@@ -338,9 +319,8 @@ const HomeProductsPageApi = {
             pagination: {
                 _page: 2,
                 _limit: 10,
-                _totalRows: 42,
             }
-    
+
         }, {
             id: '21',
             img: 'https://shop.mixigaming.com/wp-content/uploads/2021/01/Ao-ba-lo-Mixi-SO-QUA-SO-QUA-300x400.jpg',
@@ -353,9 +333,8 @@ const HomeProductsPageApi = {
             pagination: {
                 _page: 3,
                 _limit: 10,
-                _totalRows: 42,
             }
-    
+
         }, {
             id: '22',
             img: 'https://shop.mixigaming.com/wp-content/uploads/2021/01/Ao-ba-lo-Mixi-DUOC-EM-UI-300x400.jpg',
@@ -368,9 +347,8 @@ const HomeProductsPageApi = {
             pagination: {
                 _page: 3,
                 _limit: 10,
-                _totalRows: 42,
             }
-    
+
         }, {
             id: '23',
             img: 'https://shop.mixigaming.com/wp-content/uploads/2021/01/Ao-ba-lo-OI-GIOI-OI-300x400.jpg',
@@ -383,9 +361,8 @@ const HomeProductsPageApi = {
             pagination: {
                 _page: 3,
                 _limit: 10,
-                _totalRows: 42,
             }
-    
+
         }, {
             id: '24',
             img: 'https://shop.mixigaming.com/wp-content/uploads/2021/01/ao-ba-lo-hi-anh-em-300x400.jpg',
@@ -396,11 +373,10 @@ const HomeProductsPageApi = {
             rating: 4,
             offset: 24,
             pagination: {
-                _page: 3,
+                _page: 1,
                 _limit: 10,
-                _totalRows: 42,
             }
-    
+
         }, {
             id: '24',
             img: 'https://shop.mixigaming.com/wp-content/uploads/2021/01/Ao-ba-lo-Mixi-QUAY-LEN-300x400.jpg',
@@ -413,9 +389,8 @@ const HomeProductsPageApi = {
             pagination: {
                 _page: 3,
                 _limit: 10,
-                _totalRows: 42,
             }
-    
+
         }, {
             id: '25',
             img: 'https://shop.mixigaming.com/wp-content/uploads/2019/06/%C3%81o-thun-%C4%91en-logo-counter-strike-300x400.jpg',
@@ -428,9 +403,8 @@ const HomeProductsPageApi = {
             pagination: {
                 _page: 3,
                 _limit: 10,
-                _totalRows: 42,
             }
-    
+
         }, {
             id: '26',
             img: 'https://shop.mixigaming.com/wp-content/uploads/2019/06/%C3%81o-thun-%C4%91en-CSGO-logo-300x400.jpg',
@@ -443,9 +417,8 @@ const HomeProductsPageApi = {
             pagination: {
                 _page: 3,
                 _limit: 10,
-                _totalRows: 42,
             }
-    
+
         }, {
             id: '27',
             img: 'https://shop.mixigaming.com/wp-content/uploads/2019/06/%C3%81o-CSGO-dog-AK-rush-B-cyka-blyat-300x400.jpg',
@@ -458,9 +431,8 @@ const HomeProductsPageApi = {
             pagination: {
                 _page: 3,
                 _limit: 10,
-                _totalRows: 42,
             }
-    
+
         }, {
             id: '28',
             img: 'https://shop.mixigaming.com/wp-content/uploads/2019/06/%C3%81o-CSGO-rush-B-cyka-blyat-300x400.jpg',
@@ -473,9 +445,8 @@ const HomeProductsPageApi = {
             pagination: {
                 _page: 3,
                 _limit: 10,
-                _totalRows: 42,
             }
-    
+
         }, {
             id: '29',
             img: ' https://shop.mixigaming.com/wp-content/uploads/2019/06/%C3%81o-thun-%C4%91en-CSGO-smoke-mid-everday-300x400.jpg',
@@ -488,10 +459,9 @@ const HomeProductsPageApi = {
             pagination: {
                 _page: 3,
                 _limit: 10,
-                _totalRows: 42,
             }
-    
-    
+
+
         }, {
             id: '30',
             img: 'https://shop.mixigaming.com/wp-content/uploads/2019/06/%C3%81o-thun-CSGO-rush-B-no-stop-300x400.jpg',
@@ -504,9 +474,8 @@ const HomeProductsPageApi = {
             pagination: {
                 _page: 3,
                 _limit: 10,
-                _totalRows: 42,
             }
-    
+
         }, {
             id: '31',
             img: 'https://shop.mixigaming.com/wp-content/uploads/2019/06/%C3%A1o-csgo-%C4%91en-h%C3%ACnh-moly-holly-300x400.jpg',
@@ -519,9 +488,8 @@ const HomeProductsPageApi = {
             pagination: {
                 _page: 3,
                 _limit: 10,
-                _totalRows: 42,
             }
-    
+
         }, {
             id: '32',
             img: 'https://shop.mixigaming.com/wp-content/uploads/2019/06/%C3%81o-logo-Playerunknowns-battle-grounds-300x400.jpg',
@@ -534,9 +502,8 @@ const HomeProductsPageApi = {
             pagination: {
                 _page: 3,
                 _limit: 10,
-                _totalRows: 42,
             }
-    
+
         }, {
             id: '33',
             img: 'https://shop.mixigaming.com/wp-content/uploads/2019/06/%C3%81o-PUBG-logo-%C4%91%E1%BA%A7u-x%C6%B0%C6%A1ng-m%C5%A9-ba-300x400.jpg',
@@ -549,10 +516,9 @@ const HomeProductsPageApi = {
             pagination: {
                 _page: 3,
                 _limit: 10,
-                _totalRows: 42,
             }
-    
-    
+
+
         }, {
             id: '34',
             img: 'https://shop.mixigaming.com/wp-content/uploads/2019/06/%C3%81o-PUBG-%C4%91en-logo-Uzi-m%C5%A9-m%E1%BB%99t-300x400.jpg',
@@ -565,9 +531,8 @@ const HomeProductsPageApi = {
             pagination: {
                 _page: 3,
                 _limit: 10,
-                _totalRows: 42,
             }
-    
+
         }, {
             id: '35',
             img: 'https://shop.mixigaming.com/wp-content/uploads/2019/06/%C3%81o-PUBG-m%C5%A9-ba-gi%C3%A1p-ba-cool-ng%E1%BA%A7u-300x400.jpg',
@@ -580,10 +545,9 @@ const HomeProductsPageApi = {
             pagination: {
                 _page: 3,
                 _limit: 10,
-                _totalRows: 42,
             }
-    
-    
+
+
         }, {
             id: '36',
             img: 'https://shop.mixigaming.com/wp-content/uploads/2019/06/%C3%81o-PUBG-%C4%91en-shotgun-m%C5%A9-m%E1%BB%99t-300x400.jpg',
@@ -596,9 +560,8 @@ const HomeProductsPageApi = {
             pagination: {
                 _page: 3,
                 _limit: 10,
-                _totalRows: 42,
             }
-    
+
         }, {
             id: '37',
             img: 'https://shop.mixigaming.com/wp-content/uploads/2019/06/%C3%81o-PUBG-pochinki-is-my-city-300x400.jpg',
@@ -611,9 +574,8 @@ const HomeProductsPageApi = {
             pagination: {
                 _page: 3,
                 _limit: 10,
-                _totalRows: 42,
             }
-    
+
         }, {
             id: '38',
             img: 'https://shop.mixigaming.com/wp-content/uploads/2019/06/%C3%81o-thun-PUBG-%C4%91en-m%C5%A9-ba-kar98-300x400.jpg',
@@ -626,9 +588,8 @@ const HomeProductsPageApi = {
             pagination: {
                 _page: 3,
                 _limit: 10,
-                _totalRows: 42,
             }
-    
+
         }, {
             id: '39',
             img: 'https://shop.mixigaming.com/wp-content/uploads/2019/06/%C3%81o-PUBG-m%C5%A9-ba-logo-battlegrounds-300x400.jpg',
@@ -641,9 +602,8 @@ const HomeProductsPageApi = {
             pagination: {
                 _page: 4,
                 _limit: 10,
-                _totalRows: 42,
             }
-    
+
         }, {
             id: '40',
             img: 'https://shop.mixigaming.com/wp-content/uploads/2019/06/%C3%81O-REFUND-GAMING-300x400.png',
@@ -656,9 +616,8 @@ const HomeProductsPageApi = {
             pagination: {
                 _page: 4,
                 _limit: 10,
-                _totalRows: 42,
             }
-    
+
         },
     ]
 }

@@ -3,21 +3,15 @@
 .Home-products {
     width: 100%;
     display: flex;
-    flex-wrap:wrap ;
+    flex-wrap: wrap ;
     background-color: #f0f0f0;
-    padding: 0 25px;
-    justify-content: space-around;
 }
 
 .List-products {
-    padding:  10px;
     cursor: pointer;
-    display: flex;
-    text-align: center;
-    justify-content: space-around;
-
+    padding: 25px;
+    width: 25%;
 }
-
 
 .box-hover {
     position: relative;
@@ -28,26 +22,26 @@
         transition: 0.5;
     }
 }
-.box-hover .lego {
-    max-width: 100%;
-    transition: all 1s;
-    display: flex;
-    text-align: center;
-}
 
 .box-hover .img-change {
     position: absolute;
     top: 0;
-    right: 0;
     opacity: 1;
 }
+
+.lego {
+    width: 100%;
+    transition: all 1s;
+    display: flex;
+}
+
+
 .box-hover:hover .img-change {
     opacity: 0;
 }
 
 .box-item {
     position: relative;
-    
 }
 
 .sale {

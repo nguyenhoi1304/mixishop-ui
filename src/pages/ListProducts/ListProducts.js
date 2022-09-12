@@ -7,7 +7,7 @@ import 'rc-slider/assets/index.css';
 import styles from './ListProducts.module.scss';
 import { makeStyles } from '@material-ui/core/styles';
 import Slider from '@material-ui/core/Slider';
-import Category from '~/pages/ListProducts/components/Sidebar';
+import Sidebar from '~/pages/ListProducts/components/Sidebar';
 import List from '~/pages/ListProducts/components/List';
 
 const useStyles = makeStyles({
@@ -78,7 +78,9 @@ function ListProducts() {
                 <div>
                     <p style={{ fontWeight: '700', fontSize: '2.4rem', color: '#000' }}>ĐỒ LƯU NIỆM MIXI</p>
                     <div className={cx('title')}>
-                        <a className={cx('link-home')} href={config.routes.home}>TRANG CHỦ / <p style={{ fontWeight: '600', color: '#000', marginLeft: '4px' }}>{label}</p> </a>
+                        <a className={cx('link-home')} href={config.routes.home}>TRANG CHỦ / </a>
+                        <p style={{ fontWeight: '600', color: '#000', marginLeft: '4px' }}>
+                            {label}</p>
 
                     </div>
                 </div>
@@ -126,7 +128,7 @@ function ListProducts() {
                             <button className={cx('filter-btn')} onClick={value}>Lọc</button>
                         </div>
                     </div>
-                    <Category onHandleChange={value => onHandleChange(value)}
+                    <Sidebar onHandleChange={value => onHandleChange(value)}
                     />
                 </div>
                 <List

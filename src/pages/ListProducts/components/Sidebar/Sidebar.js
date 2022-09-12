@@ -23,7 +23,6 @@ function Sidebar({ onHandleChange }) {
         const action = callProductActions(item.label);
         history('/danh-muc')
         dispatch(action);
-        console.log(item.label)
 
     }
 

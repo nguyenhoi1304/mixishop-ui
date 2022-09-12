@@ -6,19 +6,18 @@ import { useState } from "react";
 import Basket from "./Basket";
 
 function Home() {
-    const {products} = data
+    const { products } = data
 
     const [cartItems, setCarItems] = useState([])
 
     const onAdd = (product) => {
-
+        console.log(product)
         const exits = cartItems.find((x) => x.id === product.id);
-        
-        if(exits) {
-            setCarItems(cartItems.map((x) => x.id === product.id ? {...exits, qty: exits.qty + 1} : x))
+        if (exits) {
+            setCarItems(cartItems.map((x) => x.id === product.id ? { ...exits, qty: exits.qty + 1 } : x))
             console.log(exits)
-        } else{
-            setCarItems([...cartItems, {...product, qty: 1}]);
+        } else {
+            setCarItems([...cartItems, { ...product, qty: 1 }]);
         }
     }
 
@@ -28,18 +27,18 @@ function Home() {
             setCarItems(cartItems.filter((x) => x.id !== product.id));
         } else {
             setCarItems(
-            cartItems.map((x) =>
-              x.id === product.id ? { ...exist, qty: exist.qty - 1 } : x
-            )
-          );
+                cartItems.map((x) =>
+                    x.id === product.id ? { ...exist, qty: exist.qty - 1 } : x
+                )
+            );
         }
-      };
-    
+    };
+
     return (
         <>
             <Banner />
             <ProductsPagesItem onAdd={onAdd} products={products}></ProductsPagesItem>
-            <Basket onAdd={onAdd} onRemove={onRemove} cartItems={cartItems}></Basket>
+            <Basket onAdd={onAdd} onRemove={onRemove} cartItems={cartItems} ></Basket>
             <Feedback />
         </>
 

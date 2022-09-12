@@ -6,7 +6,7 @@ import Product from './Product';
 const cx = classNames.bind(styles)
 
 function ProductsPagesItem(props) {
-    const {products, onAdd} = props
+    const { products, onAdd } = props
     const [countPage, setCountPage] = useState(1)
     const totalPages = Math.floor((products.length) / 10)
 
@@ -42,7 +42,7 @@ function ProductsPagesItem(props) {
         <div>
             <div className={cx('Home-products')}>
                 {handleFilterProducts(products).map((product) => (
-                    <Product key={product.id} product={product} onAdd={onAdd}/>
+                    <Product key={product.id} product={product} onAdd={onAdd} />
                 ))
                 }
             </div>
