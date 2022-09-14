@@ -11,6 +11,8 @@ import 'tippy.js/dist/tippy.css';
 import Search from '../Search';
 import { useEffect, useRef, useState } from 'react';
 import Products from './Products';
+import { useSelector } from 'react-redux';
+
 
 
 const cx = classNames.bind(styles)
@@ -52,13 +54,12 @@ let useClickOutside2 = (handler2) => {
 
 }
 
-
-
-function Header() {
+function Header({ setShow, size }) {
     const [showSearch, setShowSearch] = useState(false)
     const [showitem, setShowItem] = useState(false)
 
-
+    const totalPrice = useSelector(state => state.callPrices.prices)
+    console.log(totalPrice)
     let search = useClickOutside(() => {
         setShowSearch(false)
     })
@@ -111,7 +112,7 @@ function Header() {
 
                         <div className={cx('header-wrapperLeft')}>
                             <Link to={config.routes.home}  >
-                                <img className={cx(['logo-images', offset > 750 && 'imgchange'])} src={images.logo} alt="TikTok" />
+                                <img onClick={() => setShow(true)} className={cx(['logo-images', offset > 750 && 'im    gchange'])} src={images.logo} alt="TikTok" />
                             </Link>
                             <div className={cx('search-link')} >
 
@@ -122,7 +123,7 @@ function Header() {
                                     <SearchIcon className={cx('search-icon')} />
                                 </button>
 
-                                <Link to={config.routes.home} className={cx('header-link')}>HOME</Link>
+                                <Link to={config.routes.home} className={cx('header-link')} onClick={() => setShow(true)}>HOME</Link>
                                 <div ref={listproducst} className={cx('header-link')}>
                                     <div style={{ cursor: 'text' }} onClick={() => setShowItem(!showitem)}>
                                         <span className={cx('list-link')} > DANH MỤC SẢN PHẨM</span>
@@ -159,14 +160,10 @@ function Header() {
                             </div>
                             <p className={cx('space')}></p>
 
-                            <div className={cx('cart-shoping')}>
-                                <div className={cx('header-link')}>
-                                    <span>GIỎ HÀNG / 0 ₫</span>
-                                    <FontAwesomeIcon icon={faCartShopping} className={cx('icon-cart')} />
-                                </div>
-                                <div className={cx('products-cart')}>
-                                    <p>Chưa có sản phẩm trong giỏ hàng</p>
-                                </div>
+                            <div className={cx('cart-shoping')} onClick={() => setShow(false)}>
+                                <FontAwesomeIcon icon={faCartShopping} className={cx('icon-cart')} />
+                                <span className={cx('cart')}>GIỎ HÀNG / {totalPrice.toLocaleString()} ₫</span>
+                                <span className={cx('size')}>{size}</span>
                             </div>
 
                         </div>

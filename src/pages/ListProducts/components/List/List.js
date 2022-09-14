@@ -10,6 +10,7 @@ function List() {
     const data = HomeProductsPageApi.products
 
     const result = useSelector(state => state.callPageProducts.label)
+    console.log(result)
     const handleFilterProduct = (productList) => {
         if (result === 'all') {
             return productList

@@ -1,19 +1,19 @@
 
-import { callProductAction } from "~/enum/enum"
+import { callTotalPricectAction } from "~/enum/enum"
 
 const initState = {
-    label: 'all',
+    prices: 0,
 }
 
 
 const callPageProductsReducer = (state = initState, action) => {
     switch (action.type) {
-        case callProductAction.callProductAction:
+
+        case callTotalPricectAction.callTotalPricectAction:
             return {
                 ...state,
-                label: (action.payload)
+                prices: (action.payload)
             }
-
         default:
             return state;
     }

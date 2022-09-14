@@ -2,13 +2,15 @@ import styles from './ProductsPagesItem.module.scss'
 import classNames from 'classnames/bind';
 import { useLayoutEffect, useState } from 'react';
 import Product from './Product';
-
+import HomeProductsPageApi from '~/fakeApi/HomeProductsPageApi'
+import { memo } from 'react';
 const cx = classNames.bind(styles)
 
-function ProductsPagesItem(props) {
-    const { products, onAdd } = props
+function ProductsPagesItem({ handleClick }) {
+
+    const data = HomeProductsPageApi.products
     const [countPage, setCountPage] = useState(1)
-    const totalPages = Math.floor((products.length) / 10)
+    const totalPages = Math.floor((data.length) / 10)
 
     function ChangeCountPrevPage() {
         setCountPage(prevCount => prevCount - 1)
@@ -36,13 +38,13 @@ function ProductsPagesItem(props) {
     }, [countPage])
 
     const handleFilterProducts = () => {
-        return products.filter(item => item.pagination._page === countPage)
+        return data.filter(item => item.pagination._page === countPage)
     }
     return (
         <div>
             <div className={cx('Home-products')}>
-                {handleFilterProducts(products).map((product) => (
-                    <Product key={product.id} product={product} onAdd={onAdd} />
+                {handleFilterProducts(data).map((item) => (
+                    <Product key={item.id} item={item} handleClick={handleClick} />
                 ))
                 }
             </div>
@@ -73,4 +75,4 @@ function ProductsPagesItem(props) {
     )
 }
 
-export default ProductsPagesItem
+export default memo(ProductsPagesItem)

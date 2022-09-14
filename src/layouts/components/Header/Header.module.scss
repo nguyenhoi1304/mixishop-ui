@@ -53,6 +53,8 @@
 
 }
 
+
+
 .sticky {
     animation: slideInleft ease-in 0.8s;
 }
@@ -99,7 +101,7 @@
 }
 
 .imgchange {
-    height: 70px;
+    height: 75px;
     animation: slideInleft ease-in 0.3s;
 
 }
@@ -113,10 +115,6 @@
 .search-icon {
     color: #000000!important;
 }
-
-
-
-
 
 .poper-search {
     height: 100vh;
@@ -228,19 +226,44 @@
 }
 
 .cart-shoping {
+    align-items: center;
     position: relative;
-   
+    &:hover {
+        cursor: pointer;
+        color:#007784;
+    }
+}
+
+
+.size {
+    position: absolute;
+    content: "";
+    display: block;
+    padding: 0px 8px;
+    background-color: #007784;
+    color: white;
+    font-weight: 600;
+    font-size: 1.9rem;
+    border-radius: 50%;
+    top: -24px;
+    left: 8px;
 }
 
 .icon-cart {
     width: 20px;
     height: 20px;
-    color: #000;
+    color: rgba(0, 0, 0, 0.744);
+
     margin-left: 2px;
+    &:hover {
+        cursor: pointer;
+        color:#007784;
+    }
 }
 .cart-shoping::after{
     position: absolute;
     content: "";
+
     display: block;
     background-color: transparent;
     width: 100%;

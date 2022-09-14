@@ -9,7 +9,7 @@
 
 .List-products {
     cursor: pointer;
-    padding: 25px;
+    padding: 10px;
     width: 25%;
 }
 
@@ -77,8 +77,16 @@
 
 .products-price {
     font-weight: 600;
+    padding: 5px;
 }
 
+.products-describe {
+    height: 36px;
+    overflow: hidden;
+    display: block;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
 .pagination {
     justify-content: center;
     background-color: #f0f0f0;
@@ -95,5 +103,15 @@
     font-size: 1.8rem;
     &:hover {
         color: #007784;
+    }
+}
+
+.addCart {
+    text-align: center;
+    background-color: #007784;
+    color: #fff;
+    padding: 10px 0;
+    &:hover {
+       background-color: #008784;
     }
 }

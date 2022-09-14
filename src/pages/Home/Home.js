@@ -1,45 +1,40 @@
 import Banner from "~/layouts/components/Banner";
-import Feedback from '~/layouts/components/Feedback/Feedback';
 import ProductsPagesItem from "./ProductsPagesItem/";
-import data from '~/fakeApi/HomeProductsPageApi'
 import { useState } from "react";
 import Basket from "./Basket";
+import Header from "~/layouts/components/Header";
+
 
 function Home() {
-    const { products } = data
 
-    const [cartItems, setCarItems] = useState([])
+    const [show, setShow] = useState(true);
+    const [cart, setCart] = useState([]);
 
-    const onAdd = (product) => {
-        console.log(product)
-        const exits = cartItems.find((x) => x.id === product.id);
-        if (exits) {
-            setCarItems(cartItems.map((x) => x.id === product.id ? { ...exits, qty: exits.qty + 1 } : x))
-            console.log(exits)
-        } else {
-            setCarItems([...cartItems, { ...product, qty: 1 }]);
-        }
-    }
+    const handleClick = (item) => {
+        if (cart.indexOf(item) !== -1) return;
+        setCart([...cart, item]);
+    };
 
-    const onRemove = (product) => {
-        const exist = cartItems.find((x) => x.id === product.id);
-        if (exist.qty === 1) {
-            setCarItems(cartItems.filter((x) => x.id !== product.id));
-        } else {
-            setCarItems(
-                cartItems.map((x) =>
-                    x.id === product.id ? { ...exist, qty: exist.qty - 1 } : x
-                )
-            );
-        }
+    const handleChange = (item, d) => {
+        const ind = cart.indexOf(item);
+        const arr = cart;
+        arr[ind].amount += d;
+
+        if (arr[ind].amount === 0) arr[ind].amount = 1;
+        setCart([...arr]);
     };
 
     return (
         <>
+            <Header setShow={setShow} size={cart.length} />
             <Banner />
-            <ProductsPagesItem onAdd={onAdd} products={products}></ProductsPagesItem>
-            <Basket onAdd={onAdd} onRemove={onRemove} cartItems={cartItems} ></Basket>
-            <Feedback />
+
+            {show ? (
+                <ProductsPagesItem handleClick={handleClick} />
+            ) : (
+                <Basket cart={cart} setCart={setCart} handleChange={handleChange} />
+            )}
+
         </>
 
     );
