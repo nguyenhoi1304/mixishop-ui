@@ -5,9 +5,20 @@
     z-index: 100;
 }
 
+
 .basket__item {
     margin-top: 35px;
     border-top: 1px solid #02070118;
+}
+
+.basket__items {
+    display: flex;
+
+}
+
+.product__information {
+    margin-left: 200px;
+    word-wrap: break-word;
 }
 
 .basket__name {

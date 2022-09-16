@@ -14,14 +14,16 @@ import Products from './Products';
 import { useSelector } from 'react-redux';
 
 
-
+// dsdasdgrgrdgr
 const cx = classNames.bind(styles)
 
-let useClickOutside = (handler) => {
-    let search = useRef();
+const useClickOutside = (handler) => {
+    const search = useRef();
+    const listproducst = useRef();
+
     useEffect(() => {
-        let mybeHandler = (event) => {
-            if (!search.current.contains(event.target)) {
+        const mybeHandler = (event) => {
+            if (!search.current.contains(event.target) || !listproducst.current.contains(event.target)) {
                 handler();
             }
         }
@@ -35,39 +37,20 @@ let useClickOutside = (handler) => {
 
 }
 
-let useClickOutside2 = (handler2) => {
-    let listproducst = useRef();
-
-    useEffect(() => {
-        let mybeHandler2 = (event) => {
-            if (!listproducst.current.contains(event.target)) {
-                handler2();
-            }
-        }
-        document.addEventListener("mousedown", mybeHandler2);
-
-        return () => {
-            document.removeEventListener("mousedown", mybeHandler2)
-        }
-    })
-    return listproducst
-
-}
 
 function Header({ setShow, size }) {
     const [showSearch, setShowSearch] = useState(false)
     const [showitem, setShowItem] = useState(false)
 
     const totalPrice = useSelector(state => state.callPrices.prices)
-    console.log(totalPrice)
-    let search = useClickOutside(() => {
+
+    const search = useClickOutside(() => {
         setShowSearch(false)
     })
 
-    let listproducst = useClickOutside2(() => {
+    const listproducst = useClickOutside(() => {
         setShowItem(false)
     })
-
 
     const [offset, setOffset] = useState(0);
 
@@ -112,7 +95,7 @@ function Header({ setShow, size }) {
 
                         <div className={cx('header-wrapperLeft')}>
                             <Link to={config.routes.home}  >
-                                <img onClick={() => setShow(true)} className={cx(['logo-images', offset > 750 && 'im    gchange'])} src={images.logo} alt="TikTok" />
+                                <img onClick={() => setShow(true)} className={cx(['logo-images', offset > 750 && 'imgchange'])} src={images.logo} alt="TikTok" />
                             </Link>
                             <div className={cx('search-link')} >
 

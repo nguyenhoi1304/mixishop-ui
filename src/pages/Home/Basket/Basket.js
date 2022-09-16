@@ -31,30 +31,31 @@ function Basket({ cart, setCart, handleChange }) {
 
     return (
         <div className={cx('basket')}>
-            <h2 style={{ textAlign: 'center' }}>SẢN PHẨM ĐANG CHỌN</h2>
-            {
-                cart.map((item) => (
-                    <div key={item.id} className={cx('basket__item')} >
-
-                        <div style={{ display: 'flex', justifyContent: 'space-around' }}>
-                            <img src={item.img} alt='' className={cx('basket__img')} />
-                            <p>
-                                <div className={cx('basket__name')}> {item.name}</div>
-                                <div className={cx('basket__describe')}>{item.describe}</div>
-                                <div className={cx('themes')}>
-                                    <button onClick={() => handleChange(item, 1)} className={cx('btn__amount')}>+</button>
-                                    <button>x{item.amount}</button>
-                                    <button onClick={() => handleChange(item, -1)} className={cx('btn__amount')}>-</button>
-                                </div>
-                                <div className={cx('basket__amount')}>{item.price.toLocaleString()} / VNĐ</div>
-                                <button className={cx('btn__remove')} onClick={() => handleRemove(item.id)}>XÓA SẢN PHẨM</button>
-                            </p>
+            <div className={cx('basket-left')}>
+                <h2 style={{ textAlign: 'center', color: '#007784' }}>SẢN PHẨM ĐANG CHỌN</h2>
+                {
+                    cart.map((item) => (
+                        <div key={item.id} className={cx('basket__item')} >
+                            <div className={cx('basket__items')}>
+                                <img src={item.img} alt='' className={cx('basket__img')} />
+                                <p className={cx('product__information')}>
+                                    <div className={cx('basket__name')}> {item.name}</div>
+                                    <div className={cx('basket__describe')}>{item.describe}</div>
+                                    <div className={cx('themes')}>
+                                        <button onClick={() => handleChange(item, 1)} className={cx('btn__amount')}>+</button>
+                                        <button>x{item.amount}</button>
+                                        <button onClick={() => handleChange(item, -1)} className={cx('btn__amount')}>-</button>
+                                    </div>
+                                    <div className={cx('basket__amount')}>{item.price.toLocaleString()} / VNĐ</div>
+                                    <button className={cx('btn__remove')} onClick={() => handleRemove(item.id)}>XÓA SẢN PHẨM</button>
+                                </p>
+                            </div>
                         </div>
-                    </div>
 
-                ))
+                    ))
 
-            }
+                }
+            </div>
             <div className={cx('total-price')}>
                 <div className={cx('pay')}>TỔNG SỐ TIỀN CẦN THANH TOÁN:</div>
                 <div className={cx('price')}>{price.toLocaleString()} / VNĐ</div>

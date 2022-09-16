@@ -125,7 +125,7 @@ function ListProducts() {
                                     {`${value[0].toLocaleString()}₫ - ${value[1].toLocaleString()}₫`}
                                 </div>
                             </div>
-                            <button className={cx('filter-btn')} onClick={value}>Lọc</button>
+                            <button className={cx('filter-btn')} >Lọc</button>
                         </div>
                     </div>
                     <Sidebar onHandleChange={value => onHandleChange(value)}
