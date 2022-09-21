@@ -3,6 +3,7 @@ import ProductsPagesItem from "./ProductsPagesItem/";
 import { useState } from "react";
 import Basket from "./Basket";
 import Header from "~/layouts/components/Header";
+import Feedback from "~/layouts/components/Feedback";
 
 
 function Home() {
@@ -34,7 +35,7 @@ function Home() {
             ) : (
                 <Basket cart={cart} setCart={setCart} handleChange={handleChange} />
             )}
-
+            <Feedback />
         </>
 
     );

@@ -14,7 +14,7 @@ import Products from './Products';
 import { useSelector } from 'react-redux';
 
 
-// dsdasdgrgrdgr
+// dsdasdgrgrdg
 const cx = classNames.bind(styles)
 
 const useClickOutside = (handler) => {
