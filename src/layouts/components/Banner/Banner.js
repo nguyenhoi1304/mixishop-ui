@@ -12,6 +12,8 @@ const cx = classNames.bind(styles)
 function banner() {
     return (
         <div className={cx('banner')}>
+        <h1>dadadadad</h1>
+
             <div className={cx('banner-img')}>
                 <img src={bannerMixi} alt="banner-mixi" className={cx('img-mixi')}></img>
             </div>
