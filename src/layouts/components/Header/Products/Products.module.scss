@@ -1,0 +1,89 @@
+.container {
+    width: 100%;
+    padding-top: 30px;
+    box-shadow: 1px 1px 15px rgb(0 0 0 / 15%);
+    background-color: #f5f0ea;
+    border-top: 2px solid #ddd;
+    justify-content: space-around;
+}
+
+//
+
+.hayghe {
+    width: 100%;
+
+}
+.products-lego {
+    margin: 0 20px;
+    width: 100%;
+}
+
+.item-lego {
+    display: flex;
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+
+}
+
+.img-legomixi {
+    right: 0;
+    width: 100%;
+    height: 100%;
+    bottom: 0;
+    left: 0;
+    top: 0;
+    -o-object-fit: cover;
+    object-fit: cover;
+    font-family: 'object-fit: cover;';
+    cursor: text;
+    transition: transform .5s;
+    &:hover {
+        transform: scale(1.1); 
+    }
+}
+
+.box-text-seemore {
+    display: flex;
+    top: 290px;
+    align-items: center; 
+    &:hover {
+        color:rgb(119, 119,119);
+    }
+}
+
+.item-right {
+    color: #007784;
+    &:hover {
+        color:rgb(119, 119,119);
+    }
+}
+
+.btn-see-all {
+    margin-left: 40px;
+    padding-top: 10px;
+    padding-bottom: 35px;
+
+}
+.link-lookall {
+    align-items: center;
+    color: #007784;
+    padding: 9px 20px;
+    background-color: white;
+    border: 2px solid #007784;
+    border-radius: 12px;
+    &:hover {
+        background-color:#007784;
+        color: white;
+    }
+}
+
+.see-more {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #007784;
+    margin-top: 15px;
+    &:hover {
+        color:rgb(119, 119,119);
+    }
+}

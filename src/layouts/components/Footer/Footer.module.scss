@@ -1,0 +1,45 @@
+.Footer {
+    border-top: 1px solid rgba(0,0,0,0.1);
+    width: 100%;
+    justify-content: space-around;
+    display: flex;
+    font-size: 1.5rem;
+  
+
+}
+.FooterCol {
+    width: 25%;
+    padding: 30px 35px;
+   
+}
+.about-us {
+    margin-top: 13px;
+}
+
+.title {
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+.list-item {
+    padding-top: 15px;
+    
+}
+
+.list-products {
+    color: #007784;
+    margin-left: 17px;
+    margin-top: 10px;
+    cursor: pointer;
+    font-size: 1.6rem;
+    &:hover {
+        color: #8224e3;
+    }
+}
+
+.icon-link {
+    margin-top: 15px;
+    color:#007784 ;
+    font-size: 3rem;
+    margin-right: 7px;
+}

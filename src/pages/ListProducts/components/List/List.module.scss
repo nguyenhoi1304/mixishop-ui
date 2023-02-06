@@ -1,0 +1,87 @@
+
+
+.Home-products {
+    width: 100%;
+    display: flex;
+    flex-wrap:wrap ;
+    background-color: #f0f0f0;
+    padding: 0 25px;
+}
+
+.List-products {
+    width: 25%;
+    padding:  10px;
+    cursor: pointer;
+    display: flex;
+    text-align: center;
+    justify-content: space-around;
+
+}
+
+
+.box-hover {
+    position: relative;
+    height: auto;
+    overflow: hidden;
+    
+}
+.box-hover .lego {
+    max-width: 100%;
+    transition: all 1s;
+    display: flex;
+    text-align: center;
+}
+
+.box-hover .img-change {
+    position: absolute;
+    top: 0;
+    right: 0;
+    opacity: 1;
+}
+.box-hover:hover .img-change {
+    opacity: 0;
+}
+
+.box-item {
+    position: relative;
+}
+
+.sale {
+    position: absolute;
+    top: 30px;
+    padding: 12px 10px;
+    background-color: #007784;
+    border-radius: 25px;
+    color: #fefeff;
+    font-weight: 600;
+    font-size: 1.5rem;
+}
+
+.products-notification {
+    position: absolute;
+    color: #333;
+    font-weight: bold;
+    text-transform: uppercase;
+    top: 50%;
+    left: 0;
+    right: 0;
+    background: #fff;
+    padding: 20px 0;
+    background: rgba(255, 255, 255, 0.913);
+    text-align: center;
+    opacity: .9;
+}
+
+.products-information {
+    text-align: center;
+}
+
+
+
+.products-price {
+    font-weight: 600;
+}
+
+.products-start {
+    color: #d26e4b
+}

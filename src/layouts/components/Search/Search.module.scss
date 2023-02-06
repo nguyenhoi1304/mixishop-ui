@@ -1,0 +1,96 @@
+
+.search,
+.search-result {
+    width: 361px;
+}
+
+.search {
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.303) !important;
+    width: 600px;
+    border-color: rgba(255,255,255,0.09);
+    font-family: var(--font-family);
+    height: var(--search-height);
+    border-radius: 25px;
+    border: 1.5px solid transparent;
+    padding: 18px;
+    display: flex;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    z-index: 4;
+    input {
+        flex: 1;
+        padding-right: 40px;
+        color: white;
+        font-size: 1.8rem;
+        font-weight: 500;
+        outline: none;
+        height: 100%;
+        font-size: 600;
+    }
+
+    input:not(:placeholder-shown) ~ .search-btn {
+        color: rgba(22, 24, 35, 0.75);
+    }
+}
+
+
+
+.search-title {
+    color: rgba(22, 24, 35, 0.5);
+    font-size: 1.4rem;
+    font-weight: 600;
+    padding: 5px 12px;
+}
+
+.clear,
+.loading {
+    position: absolute;
+    right: 60px;
+    top: 50%;
+    font-size: 3rem;
+    transform: translateY(-50%);
+    color: rgb(227, 229, 238);
+}
+
+.loading {
+    color: red;
+    animation: spinner 1s linear; // linear quay đều, infinite quay vô hạn
+}
+// tạo key loading chuyển động quay tròn
+@keyframes spinner {
+    from {
+        transform: translateY(-50%) rotate(0);
+    }
+    to {
+        transform: translateY(-50%) rotate(360deg);
+    }
+}
+.search-btn {
+    width: var(--search-button-width);
+    height: 100%;
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+    border-color: rgba(255,255,255,0.09);
+    justify-content: center;
+    box-shadow: none;
+    border-top-right-radius: var(--search-boder-radius);
+    border-bottom-right-radius: var(--search-boder-radius);
+    font-size: 1.8rem;
+    color: #f1f1f1;
+    cursor: pointer;
+   
+}
+
+.search-find{
+    display: block;
+    position: absolute;
+    right: 20px ;
+    top: 50%;
+    font-size: 3rem;
+    transform: translateY(-50%);
+    color: rgb(245, 247, 255);
+    cursor: pointer;
+}

@@ -1,0 +1,117 @@
+
+
+.Home-products {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap ;
+    background-color: #f0f0f0;
+}
+
+.List-products {
+    cursor: pointer;
+    padding: 10px;
+    width: 25%;
+}
+
+.box-hover {
+    position: relative;
+    height: auto;
+    overflow: hidden;
+    &:hover {
+        opacity: 0.8;
+        transition: 0.5;
+    }
+}
+
+.box-hover .img-change {
+    position: absolute;
+    top: 0;
+    opacity: 1;
+}
+
+.lego {
+    width: 100%;
+    transition: all 1s;
+    display: flex;
+}
+
+
+.box-hover:hover .img-change {
+    opacity: 0;
+}
+
+.box-item {
+    position: relative;
+}
+
+.sale {
+    position: absolute;
+    top: 30px;
+    padding: 12px 10px;
+    background-color: #007784;
+    border-radius: 25px;
+    color: #fefeff;
+    font-weight: 600;
+    font-size: 1.5rem;
+}
+
+.products-notification {
+    position: absolute;
+    color: #333;
+    font-weight: bold;
+    text-transform: uppercase;
+    top: 50%;
+    left: 0;
+    right: 0;
+    background: #fff;
+    padding: 20px 0;
+    background: rgba(255, 255, 255, 0.913);
+    text-align: center;
+    opacity: .9;
+}
+
+.products-information {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.products-price {
+    font-weight: 600;
+    padding: 5px;
+}
+
+.products-describe {
+    height: 36px;
+    overflow: hidden;
+    display: block;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.pagination {
+    justify-content: center;
+    background-color: #f0f0f0;
+    display: flex;
+    align-items: center;
+    font-size: 2rem;
+}
+
+.btn__page {
+    padding: 15px 10px;
+    margin: 10px 10px;
+    cursor: pointer;
+    color: #333;
+    font-size: 1.8rem;
+    &:hover {
+        color: #007784;
+    }
+}
+
+.addCart {
+    text-align: center;
+    background-color: #007784;
+    color: #fff;
+    padding: 10px 0;
+    &:hover {
+       background-color: #008784;
+    }
+}
