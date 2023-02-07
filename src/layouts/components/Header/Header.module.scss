@@ -222,11 +222,12 @@
 }
 
 .phone-icon {
-    margin: 0 10px;
+    margin: 10px 10px;
 }
 
 .cart-shoping {
     align-items: center;
+    
     position: relative;
     margin-right: 20px;
     &:hover {
@@ -275,7 +276,6 @@
 .cart-shoping::after{
     position: absolute;
     content: "";
-
     display: block;
     background-color: transparent;
     width: 100%;

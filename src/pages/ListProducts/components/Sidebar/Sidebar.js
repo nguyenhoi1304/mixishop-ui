@@ -46,7 +46,7 @@ function Sidebar({ onHandleChange }) {
 
                 ))}
             </ul>
-        </div >
+        </div>
     );
 }
 

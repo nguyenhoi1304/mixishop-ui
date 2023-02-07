@@ -35,7 +35,6 @@
 .box-hover .img-change {
     position: absolute;
     top: 0;
-    right: 0;
     opacity: 1;
 }
 .box-hover:hover .img-change {
@@ -49,7 +48,7 @@
 .sale {
     position: absolute;
     top: 30px;
-    padding: 12px 10px;
+    white-space: nowrap;
     background-color: #007784;
     border-radius: 25px;
     color: #fefeff;

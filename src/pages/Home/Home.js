@@ -17,7 +17,6 @@ function Home( {isLogin, onLogoutSuccess}) {
         setCart([...cart, item]);
     };
 
-    
 
     const handleChange = (item, d) => {
         const ind = cart.indexOf(item);

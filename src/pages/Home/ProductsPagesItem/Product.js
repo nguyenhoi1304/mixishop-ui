@@ -10,31 +10,33 @@ function Product({ item, handleClick }) {
     const { imgchange, img, name, describe, price } = item;
     return (
 
-        <div className={cx('List-products')} >
-            <div className={cx('products-item')}>
-                <div className={cx('products-image')}>
-                    <div className={cx('box-hover')}>
-                        {imgchange && (
-                            <div className={cx('box-item')}>
-                                <div className={cx('box-img')}>
-                                    <img className={cx('img-change', 'lego')} src={imgchange} alt='legomixi' />
+        <div className="col-xs-6 col-sm-4 col-md-3">
+            <div className={cx('List-products')} >
+                <div className={cx('products-item')}>
+                    <div className={cx('products-image')}>
+                        <div className={cx('box-hover')}>
+                            {imgchange && (
+                                <div className={cx('box-item')}>
+                                    <div className={cx('box-img')}>
+                                        <img className={cx('img-change', 'lego')} src={imgchange} alt='legomixi' />
+                                    </div>
+                                    <div className={cx('sale')}>Giảm Giá!</div>
                                 </div>
-                                <div className={cx('sale')}>Giảm Giá!</div>
-                            </div>
-                        )
-                        }
-                        <img src={img} alt='legomixi' className={cx('lego')} />
+                            )
+                            }
+                            <img src={img} alt='legomixi' className={cx('lego')} />
+                        </div>
                     </div>
+                    <div className={cx('products-information')}>
+                        <div className={cx('products-name')}>{name}</div>
+                        <div className={cx('products-describe')}>{describe}</div>
+                        <Rating />
+                        <p className={cx('products-price')}>{price.toLocaleString()}</p>
+                    </div>
+    
+                    <div className={cx('addCart')} onClick={() => handleClick(item)}>Thêm vào giỏ hàng</div>
+    
                 </div>
-                <div className={cx('products-information')}>
-                    <div className={cx('products-name')}>{name}</div>
-                    <div className={cx('products-describe')}>{describe}</div>
-                    <Rating />
-                    <p className={cx('products-price')}>{price.toLocaleString()}</p>
-                </div>
-
-                <div className={cx('addCart')} onClick={() => handleClick(item)}>Thêm vào giỏ hàng</div>
-
             </div>
         </div>
     );

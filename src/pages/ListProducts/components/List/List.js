@@ -19,44 +19,46 @@ function List() {
 
     return (
 
-        <div className={cx('Home-products')} >
-            {handleFilterProduct(data).map((item, index) => (
-                <div className={cx('List-products')} key={index}>
-                    <div className={cx('products-item')}>
-                        <div className={cx('products-image')}>
-                            <div className={cx('box-hover')}>
-                                {item.imgchange && (
-                                    <div className={cx('box-item')}>
-                                        <div className={cx('box-img')}>
-                                            <img className={cx('img-change', 'lego')} src={item.imgchange} alt='legomixi' />
+          
+                <div className={cx('Home-products')} >
+                    {handleFilterProduct(data).map((item, index) => (
+                        <div className={cx('List-products col-xs-6 col-sm-4 col-md-3')} key={index}>
+                            <div className={cx('products-item')}>
+                                <div className={cx('products-image')}>
+                                    <div className={cx('box-hover')}>
+                                        {item.imgchange && (
+                                            <div className={cx('box-item')}>
+                                                <div className={cx('box-img')}>
+                                                    <img className={cx('img-change', 'lego')} src={item.imgchange} alt='legomixi' />
+                                                </div>
+                                                <div className={cx('sale')}>{item.sale}</div>
+                                            </div>
+                                        )
+                                        }
+                                        <div className={cx('products-notification')}>
+                                            <span >Hết Hàng</span>
                                         </div>
-                                        <div className={cx('sale')}>{item.sale}</div>
+                                        <img src={item.img} alt='legomixi' className={cx('lego')} />
                                     </div>
-                                )
-                                }
-                                <div className={cx('products-notification')}>
-                                    <span >Hết Hàng</span>
                                 </div>
-                                <img src={item.img} alt='legomixi' className={cx('lego')} />
+                                <div className={cx('products-information')}>
+                                    <div className={cx('products-name')}>{item.name}</div>
+                                    <div className={cx('products-describe')}>{item.describe}</div>
+                                    <ul>
+                                        <Rating />
+                                    </ul>
+                                    <p className={cx('products-price')}>
+                                        {item.price.toLocaleString()}
+                                    </p>
+                                </div>
                             </div>
+        
                         </div>
-                        <div className={cx('products-information')}>
-                            <div className={cx('products-name')}>{item.name}</div>
-                            <div className={cx('products-describe')}>{item.describe}</div>
-                            <ul>
-                                <Rating />
-                            </ul>
-                            <p className={cx('products-price')}>
-                                {item.price.toLocaleString()}
-                            </p>
-                        </div>
-                    </div>
-
+                    ))
+                    }
+        
                 </div>
-            ))
-            }
-
-        </div>
+ 
 
 
 

@@ -42,6 +42,7 @@ export default function SignIn() {
         formdata.append("username", valueEmail);
         formdata.append("password", valuePassword);
 
+    
         var requestOptions = {
             method: 'POST',
             body: formdata,
@@ -56,6 +57,7 @@ export default function SignIn() {
                 throw Error(response.status)
             })
             .then(result => {
+
                 localStorage.setItem("access_token", result.access_token)
                 localStorage.setItem("email", result.email)
                 localStorage.setItem("token_type", result.token_type)
@@ -145,7 +147,6 @@ export default function SignIn() {
                                     </Grid>
                                 </Box>
                             </Box>
-
                         </Container>
                     </ThemeProvider>
             </div>
