@@ -114,7 +114,7 @@ function Header({ setShow, size, isLogin, onLogoutSuccess }) {
                                     className={cx('header-link')}
                                     onClick={() => setShow(true)}
                                 >
-                                    HOME
+                                    <span>HOME</span>
                                 </Link>
                                 <div ref={listproducst} className={cx('header-link')}>
                                     <div style={{ cursor: 'text' }} onClick={() => setShowItem(!showitem)}>

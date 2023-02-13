@@ -8,6 +8,7 @@ const routes = {
     search: '/search',
     signin: '/signin',
     signup:'/signup',
+    productdetail:'/productdetail',
     listProducts: {
         list: '/danh-muc',
 

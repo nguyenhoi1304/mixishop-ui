@@ -13,12 +13,14 @@ import ListProducts from '~/pages/ListProducts'
 import Privacypolicy from '~/pages/Privacypolicy'
 import Rules from '~/pages/Rules'
 import Sitemap from '~/pages/Sitemap'
+import Productdetails from '~/pages/Productdetails/Productdetails'
 
 
 const publicRoutes = [
     { path: config.routes.home, component: Home },
     { path: config.routes.following, component: Following },
     { path: config.routes.profile, component: Profile },
+    { path: config.routes.productdetail, component: Productdetails },
     { path: config.routes.signin, component: SignIn },
     { path: config.routes.signup, component: SignUp, /*layout: HeaderOnly*/ },
     { path: config.routes.search, component: Search, layout: null },

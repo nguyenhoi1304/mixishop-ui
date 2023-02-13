@@ -39,10 +39,10 @@ function Feedback() {
                     </div>
                 </aside>
 
-                <div class="container-fluid padding">
-	                <div class="row text-center padding">
+                <div className="container-fluid padding">
+	                <div className="row text-center padding">
                         {imgDescribe.map((item, id) => (
-                            <div class=' col-xs-6 col-sm-4 col-md-3' key={id} >
+                            <div className=' col-xs-6 col-sm-4 col-md-3' key={id} >
                                 <img className={cx('img-describe')} src={item.link} alt='' />
                             </div>
                         ))}

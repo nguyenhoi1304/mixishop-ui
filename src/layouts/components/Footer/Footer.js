@@ -114,7 +114,9 @@ function Footer() {
 
             <ul>
                 {informations.map((item, index) => (
-                    <Link key={index} to={item.link}><li className={cx('list-products')} onClick={handlerUppolicy}>{item.info}</li></Link>
+                    <Link key={index} to={item.link}>
+                    <li className={cx('list-products')} onClick={handlerUppolicy}>{item.info}</li>
+                    </Link>
                 ))}
             </ul>
         )

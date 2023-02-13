@@ -4,6 +4,7 @@ import { useLayoutEffect, useState } from 'react';
 import Product from './Product';
 import HomeProductsPageApi from '~/fakeApi/HomeProductsPageApi'
 import { memo } from 'react';
+import ProductList from './ProductList';
 const cx = classNames.bind(styles)
 
 function ProductsPagesItem({ handleClick }) {
@@ -44,7 +45,7 @@ function ProductsPagesItem({ handleClick }) {
         <div>
             <div className={cx('Home-products')}>
                 {handleFilterProducts(data).map((item) => (
-                    <Product key={item.id} item={item} handleClick={handleClick} />
+                    <ProductList key={item.id} item={item} handleClick={handleClick} />
                 ))
                 }
             </div>
