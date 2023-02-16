@@ -1,7 +1,6 @@
 import styles from './ProductsPagesItem.module.scss'
 import classNames from 'classnames/bind';
 import { useLayoutEffect, useState } from 'react';
-import Product from './Product';
 import HomeProductsPageApi from '~/fakeApi/HomeProductsPageApi'
 import { memo } from 'react';
 import ProductList from './ProductList';

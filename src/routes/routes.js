@@ -1,6 +1,6 @@
 import config from '~/config'
 //Layout
-import { HeaderOnly } from '~/layouts'
+// import { HeaderOnly } from '~/layouts'
 
 import Home from '~/pages/Home'
 import Following from '~/pages/Following'

@@ -15,7 +15,6 @@ import { useSelector } from 'react-redux';
 
 import avatar from '~/assets/images/avatar.jpg';
 
-// dsdasdgrgrdg
 const cx = classNames.bind(styles);
 
 const useClickOutside = (handler) => {
