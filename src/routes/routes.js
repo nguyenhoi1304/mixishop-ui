@@ -5,15 +5,15 @@ import config from '~/config'
 import Home from '~/pages/Home'
 import Following from '~/pages/Following'
 import Profile from '~/pages/Profile'
-import SignUp from '~/pages/SignUp'
 import Search from '~/pages/Search'
-import SignIn from '~/pages/SignIn'
 import Notification from '~/pages/Notification'
 import ListProducts from '~/pages/ListProducts'
 import Privacypolicy from '~/pages/Privacypolicy'
 import Rules from '~/pages/Rules'
 import Sitemap from '~/pages/Sitemap'
 import Productdetails from '~/pages/Productdetails/Productdetails'
+import Register from '~/pages/Register'
+import Login from '~/pages/Login'
 
 
 const publicRoutes = [
@@ -21,8 +21,8 @@ const publicRoutes = [
     { path: config.routes.following, component: Following },
     { path: config.routes.profile, component: Profile },
     { path: config.routes.productdetail, component: Productdetails },
-    { path: config.routes.signin, component: SignIn },
-    { path: config.routes.signup, component: SignUp, /*layout: HeaderOnly*/ },
+    { path: config.routes.login, component: Login },
+    { path: config.routes.register, component: Register, /*layout: HeaderOnly*/ },
     { path: config.routes.search, component: Search, layout: null },
     { path: config.routes.notification, component: Notification },
     { path: config.routes.privacypolicy, component: Privacypolicy },

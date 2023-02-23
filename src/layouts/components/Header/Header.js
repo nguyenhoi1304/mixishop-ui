@@ -164,7 +164,7 @@ function Header({ setShow, size, isLogin, onLogoutSuccess }) {
                                     {isLogin ? (
                                         <img src={avatar} alt="avatar" className={cx('avatar_login')}></img>
                                     ) : (
-                                        <Link to={config.routes.signin}>
+                                        <Link to={config.routes.login}>
                                             {' '}
                                             <button className={cx('btn-login')}>Đăng Nhập</button>
                                         </Link>

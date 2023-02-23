@@ -6,8 +6,8 @@ const routes = {
     rules: '/dieu-khoan',
     sitemap: '/sitemap',
     search: '/search',
-    signin: '/signin',
-    signup:'/signup',
+    login: '/login',
+    register:'/register',
     productdetail:'/productdetail',
     listProducts: {
         list: '/danh-muc',

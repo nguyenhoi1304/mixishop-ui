@@ -1,13 +1,17 @@
 import styles from './List.module.scss'
 import classNames from 'classnames/bind';
 import { memo } from 'react'
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import HomeProductsPageApi from '~/fakeApi/HomeProductsPageApi'
 import Rating from '~/layouts/components/Rating/Rating';
+import { callDetailItemActions } from '~/store/actions/callPageAction';
+import { Link } from 'react-router-dom';
+import config from '~/config';
 const cx = classNames.bind(styles)
 
 function List() {
     const data = HomeProductsPageApi.products
+    const dispatch = useDispatch()
 
     const result = useSelector(state => state.callPageProducts.label)
     const handleFilterProduct = (productList) => {
@@ -17,13 +21,19 @@ function List() {
         return productList.filter(item => item.label === result)
     }
 
+    const handleDetailItem = (item) => {
+        const action = callDetailItemActions(item)
+        dispatch(action)
+    }
+
+
     return (
 
           
                 <div className={cx('Home-products')} >
                     {handleFilterProduct(data).map((item, index) => (
                         <div className={cx('List-products col-xs-6 col-sm-4 col-md-3')} key={index}>
-                            <div className={cx('products-item')}>
+                            <Link to = {config.routes.productdetail} className={cx('products-item')} onClick={handleDetailItem(item)}>
                                 <div className={cx('products-image')}>
                                     <div className={cx('box-hover')}>
                                         {item.imgchange && (
@@ -51,7 +61,7 @@ function List() {
                                         {item.price.toLocaleString()}
                                     </p>
                                 </div>
-                            </div>
+                            </Link>
         
                         </div>
                     ))

@@ -6,6 +6,10 @@ const Productdetails = () => {
     const detailItem = useSelector((state) => state.callDetail.itemDetail);
     const { img, img1, img2, name, describe, price } = detailItem;
 
+    const handleSubmit = () => {
+        alert('Bạn đặt mua thành công')
+    }
+
     return (
         <div style={{ margin: '140px 0' }}>
             <div className="container">
@@ -24,9 +28,9 @@ const Productdetails = () => {
                         id="carouselExampleIndicators"
                         class="carousel slide"
                         data-ride="carousel"
-                        style={{ width: '40%', backgroundColor: '#4db4db' }}
+                        style={{ width: '40%' }}
                     >
-                        <ol class="carousel-indicators" style={{ backgroundColor: '#4db4db' }}>
+                        <ol class="carousel-indicators">
                             <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
                             <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
                             <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
@@ -88,7 +92,7 @@ const Productdetails = () => {
                             <h1 style={{ marginTop: '20px' }}>Giá: {price}/VNĐ</h1>
                         </div>
                         <div style={{ marginTop: '20px' }}>
-                            <button
+                            <button onClick={handleSubmit}
                                 style={{
                                     backgroundColor: 'red',
                                     color: 'white',

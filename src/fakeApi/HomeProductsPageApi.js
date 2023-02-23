@@ -451,7 +451,7 @@ const HomeProductsPageApi = {
             }
 
         }, {
-            id: '24',
+            id: '25',
             img: 'https://shop.mixigaming.com/wp-content/uploads/2021/01/Ao-ba-lo-Mixi-QUAY-LEN-300x400.jpg',
             img1:'',
             img2:'',
@@ -468,7 +468,7 @@ const HomeProductsPageApi = {
             }
 
         }, {
-            id: '25',
+            id: '26',
             img: 'https://shop.mixigaming.com/wp-content/uploads/2019/06/%C3%81o-thun-%C4%91en-logo-counter-strike-300x400.jpg',
             img1:'',
             img2:'',
@@ -485,7 +485,7 @@ const HomeProductsPageApi = {
             }
 
         }, {
-            id: '26',
+            id: '27',
             img: 'https://shop.mixigaming.com/wp-content/uploads/2019/06/%C3%81o-thun-%C4%91en-CSGO-logo-300x400.jpg',
             img1:'',
             img2:'',
@@ -502,7 +502,7 @@ const HomeProductsPageApi = {
             }
 
         }, {
-            id: '27',
+            id: '28',
             img: 'https://shop.mixigaming.com/wp-content/uploads/2019/06/%C3%81o-CSGO-dog-AK-rush-B-cyka-blyat-300x400.jpg',
             img1:'',
             img2:'',
@@ -519,7 +519,7 @@ const HomeProductsPageApi = {
             }
 
         }, {
-            id: '28',
+            id: '29',
             img: 'https://shop.mixigaming.com/wp-content/uploads/2019/06/%C3%81o-CSGO-rush-B-cyka-blyat-300x400.jpg',
             img1:'',
             img2:'',
@@ -536,7 +536,7 @@ const HomeProductsPageApi = {
             }
 
         }, {
-            id: '29',
+            id: '30',
             img: ' https://shop.mixigaming.com/wp-content/uploads/2019/06/%C3%81o-thun-%C4%91en-CSGO-smoke-mid-everday-300x400.jpg',
             img1:'',
             img2:'',
@@ -554,7 +554,7 @@ const HomeProductsPageApi = {
 
 
         }, {
-            id: '30',
+            id: '31',
             img: 'https://shop.mixigaming.com/wp-content/uploads/2019/06/%C3%81o-thun-CSGO-rush-B-no-stop-300x400.jpg',
             img1:'',
             img2:'',
@@ -571,7 +571,7 @@ const HomeProductsPageApi = {
             }
 
         }, {
-            id: '31',
+            id: '32',
             img: 'https://shop.mixigaming.com/wp-content/uploads/2019/06/%C3%A1o-csgo-%C4%91en-h%C3%ACnh-moly-holly-300x400.jpg',
             img1:'',
             img2:'',
@@ -588,7 +588,7 @@ const HomeProductsPageApi = {
             }
 
         }, {
-            id: '32',
+            id: '33',
             img: 'https://shop.mixigaming.com/wp-content/uploads/2019/06/%C3%81o-logo-Playerunknowns-battle-grounds-300x400.jpg',
             img1:'',
             img2:'',
@@ -605,7 +605,7 @@ const HomeProductsPageApi = {
             }
 
         }, {
-            id: '33',
+            id: '34',
             img: 'https://shop.mixigaming.com/wp-content/uploads/2019/06/%C3%81o-PUBG-logo-%C4%91%E1%BA%A7u-x%C6%B0%C6%A1ng-m%C5%A9-ba-300x400.jpg',
             img1:'',
             img2:'',
@@ -623,7 +623,7 @@ const HomeProductsPageApi = {
 
 
         }, {
-            id: '34',
+            id: '35',
             img: 'https://shop.mixigaming.com/wp-content/uploads/2019/06/%C3%81o-PUBG-%C4%91en-logo-Uzi-m%C5%A9-m%E1%BB%99t-300x400.jpg',
             img1:'',
             img2:'',
@@ -640,7 +640,7 @@ const HomeProductsPageApi = {
             }
 
         }, {
-            id: '35',
+            id: '36',
             img: 'https://shop.mixigaming.com/wp-content/uploads/2019/06/%C3%81o-PUBG-m%C5%A9-ba-gi%C3%A1p-ba-cool-ng%E1%BA%A7u-300x400.jpg',
             img1:'',
             img2:'',
@@ -658,7 +658,7 @@ const HomeProductsPageApi = {
 
 
         }, {
-            id: '36',
+            id: '37',
             img: 'https://shop.mixigaming.com/wp-content/uploads/2019/06/%C3%81o-PUBG-%C4%91en-shotgun-m%C5%A9-m%E1%BB%99t-300x400.jpg',
             img1:'',
             img2:'',
@@ -675,7 +675,7 @@ const HomeProductsPageApi = {
             }
 
         }, {
-            id: '37',
+            id: '38',
             img: 'https://shop.mixigaming.com/wp-content/uploads/2019/06/%C3%81o-PUBG-pochinki-is-my-city-300x400.jpg',
             img1:'',
             img2:'',
@@ -692,7 +692,7 @@ const HomeProductsPageApi = {
             }
 
         }, {
-            id: '38',
+            id: '39',
             img: 'https://shop.mixigaming.com/wp-content/uploads/2019/06/%C3%81o-thun-PUBG-%C4%91en-m%C5%A9-ba-kar98-300x400.jpg',
             img1:'',
             img2:'',
@@ -709,7 +709,7 @@ const HomeProductsPageApi = {
             }
 
         }, {
-            id: '39',
+            id: '40',
             img: 'https://shop.mixigaming.com/wp-content/uploads/2019/06/%C3%81o-PUBG-m%C5%A9-ba-logo-battlegrounds-300x400.jpg',
             img1:'',
             img2:'',
@@ -726,7 +726,7 @@ const HomeProductsPageApi = {
             }
 
         }, {
-            id: '40',
+            id: '41',
             img: 'https://shop.mixigaming.com/wp-content/uploads/2019/06/%C3%81O-REFUND-GAMING-300x400.png',
             img1:'',
             img2:'',
