@@ -1,16 +1,16 @@
 import Banner from "~/layouts/components/Banner";
 import ProductsPagesItem from "./ProductsPagesItem/";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Basket from "./Basket";
 import Header from "~/layouts/components/Header";
 import Feedback from "~/layouts/components/Feedback";
 
-
 function Home( {isLogin, onLogoutSuccess}) {
+    
 
     const [show, setShow] = useState(true);
     const [cart, setCart] = useState([]);
-
+    const [books, setBooks] = useState([])
     const handleClick = (item) => {
         if (cart.indexOf(item) !== -1) return;
        
@@ -26,11 +26,16 @@ function Home( {isLogin, onLogoutSuccess}) {
         setCart([...arr]);
     };
 
+ 
+
     return (
         <>
             <Header setShow={setShow} size={cart.length}  isLogin = {isLogin} onLogoutSuccess = {onLogoutSuccess}/>
             <Banner />
-
+            <div>
+          
+                
+            </div>
             {show ? (
                 <ProductsPagesItem handleClick={handleClick} />
             ) : (

@@ -43,8 +43,8 @@ function CategoryHeader({ handleShowList }) {
                 ))
                 }
 
-            </div >
-        </div >
+            </div>
+        </div>
     );
 }
 

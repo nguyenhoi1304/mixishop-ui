@@ -39,13 +39,13 @@ const Productdetails = () => {
                         </ol>
                         <div class="carousel-inner">
                             <div class="carousel-item active">
-                                <img class="d-block w-100" src={img} alt="none" />
+                                <img style={{width:'500px', height:'500px'}} class="d-block w-100" src={img} alt="none" />
                             </div>
                             <div class="carousel-item">
-                                <img class="d-block w-100" src={img1} alt="none" />
+                                <img style={{width:'500px', height:'500px'}} class="d-block w-100" src={img1} alt="none" />
                             </div>
                             <div class="carousel-item">
-                                <img class="d-block w-100" src={img2} alt="none" />
+                                <img style={{width:'500px', height:'500px'}} class="d-block w-100" src={img2} alt="none" />
                             </div>
                            
                         </div>

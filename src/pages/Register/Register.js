@@ -65,7 +65,7 @@ export default function SignUp() {
     };
 
     return (
-        <section>
+        <section className={cx('container')}>
        <div className={cx('form-box')} onSubmit={handleSubmit}>
             <div className={cx('form-value')}>
             <form action="">
@@ -109,7 +109,7 @@ export default function SignUp() {
                    
                     <button type="submit" className={cx('login-btn')}>Register</button>
                     <div className={cx('register')}>
-                        <p>Don't have a account <a href={config.routes.login}>Login</a></p>
+                        <p>Do you already have an account <a href={config.routes.login}>Login</a></p>
                     </div>
                 </form>
             </div>

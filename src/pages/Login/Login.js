@@ -1,13 +1,15 @@
 import * as React from 'react';
 import { useState } from 'react';
 import config from '~/config';
-
 import styles from './Login.module.scss';
-
 import classNames from 'classnames/bind';
 import Home from '../Home';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEnvelope, faLock } from '@fortawesome/free-solid-svg-icons';
+import {  useSignInWithGoogle } from 'react-firebase-hooks/auth'
+import { auth } from '~/firebase';
+
+
 
 const cx = classNames.bind(styles);
 
@@ -15,6 +17,7 @@ export default function Login() {
     const [isLogin, setIslogin] = useState(localStorage.getItem('accessToken') != null);
     const [valueEmail, setvalueEmail] = useState('');
     const [valuePassword, setValuePassword] = useState('');
+    const [signInWithGoogle, _user, _loading, _error] = useSignInWithGoogle(auth)
 
     const handleSubmit = (event) => {
         event.preventDefault();
@@ -55,12 +58,19 @@ export default function Login() {
         setIslogin(false);
     };
 
+
+    const  signIn = () => {
+        signInWithGoogle()
+    }
+
+
+
     return (
         <div>
             {isLogin ? (
                 <Home onLogoutSuccess={onLogoutSuccess} isLogin={isLogin}></Home>
             ) : (
-                <section>
+                <section className={cx('container')}>
                     <div className={cx('form-box')} onSubmit={handleSubmit}>
                         <div className={cx('form-value')}>
                             <form action="">
@@ -92,6 +102,8 @@ export default function Login() {
                                     </label>
                                 </div>
                                 <button className={cx('login-btn')}>Log in</button>
+                                <button className={cx('login-btn')} onClick= {signIn}>Sign in with Google</button>
+
                                 <div className={cx('register')}>
                                     <p>
                                         Don't have a account <a href={config.routes.register}>Register</a>

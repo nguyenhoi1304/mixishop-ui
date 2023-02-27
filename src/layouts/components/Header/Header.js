@@ -9,46 +9,24 @@ import { faAngleDown, faCartShopping, faClose, faPhone } from '@fortawesome/free
 import Tippy from '@tippyjs/react';
 import 'tippy.js/dist/tippy.css';
 import Search from '../Search';
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useState } from 'react';
 import Products from './Products';
 import { useSelector } from 'react-redux';
+import { serverTimestamp, setDoc, doc } from 'firebase/firestore';
 
 import avatar from '~/assets/images/avatar.jpg';
+import { useAuthState } from 'react-firebase-hooks/auth'
+import { auth, db } from '~/firebase';
+import { signOut } from 'firebase/auth';
 
 const cx = classNames.bind(styles);
 
-const useClickOutside = (handler) => {
-    const search = useRef();
-    const listproducst = useRef();
-
-    useEffect(() => {
-        const mybeHandler = (event) => {
-            if (!search.current(event.target) || !listproducst.current(event.target)) {
-                handler();
-            }
-        };
-        document.addEventListener('mousedown', mybeHandler);
-
-        return () => {
-            document.removeEventListener('mousedown', mybeHandler);
-        };
-    });
-    return search;
-};
 
 function Header({ setShow, size, isLogin, onLogoutSuccess }) {
     const [showSearch, setShowSearch] = useState(false);
     const [showitem, setShowItem] = useState(false);
-
+    const [loggedInUser] = useAuthState(auth)
     const totalPrice = useSelector((state) => state.callPrices.prices);
-
-    const search = useClickOutside(() => {
-        setShowSearch(false);
-    });
-
-    const listproducst = useClickOutside(() => {
-        setShowItem(false);
-    });
 
     const [offset, setOffset] = useState(0);
 
@@ -67,12 +45,44 @@ function Header({ setShow, size, isLogin, onLogoutSuccess }) {
         });
     };
 
+    useEffect(() => {
+        const  setUserInDb = async () => {
+          try {
+            await setDoc(
+              doc(db , 'users', loggedInUser?.email),
+              {
+                email: loggedInUser?.email,
+                lastSeen: serverTimestamp(), //  thoi gian nguoi dung
+                photoURL: loggedInUser?.photoURL
+              },
+              {
+                merge: true // khong response 1 email 2 lan 
+              }
+            )
+          }catch(error) {
+            console.log('ERROR SETTING USER INFO IN DB', error)
+          }
+        }
+        if(loggedInUser) {
+          setUserInDb()
+        }
+      
+      },[loggedInUser])
+
+      const Logout = async () => {
+        try {
+            await signOut(auth)
+        }catch(error) {
+            console.log('Error LOGGING OUT', error)
+        }
+    }
+      
     return (
         <div>
             {showSearch && (
                 <div className={cx('modal')}>
                     <div className={cx('modal__overlay')}> </div>
-                    <div ref={search} className={cx('modal__body')}>
+                    <div className={cx('modal__body')}>
                         <FontAwesomeIcon
                             className={cx('icon-close')}
                             onClick={() => {
@@ -115,7 +125,7 @@ function Header({ setShow, size, isLogin, onLogoutSuccess }) {
                                 >
                                     <span>HOME</span>
                                 </Link>
-                                <div ref={listproducst} className={cx('header-link')}>
+                                <div className={cx('header-link')}>
                                     <div style={{ cursor: 'text' }} onClick={() => setShowItem(!showitem)}>
                                         <span className={cx('list-link')}> DANH MỤC SẢN PHẨM</span>
                                         <FontAwesomeIcon className={cx('down-icon')} icon={faAngleDown} />
@@ -165,8 +175,20 @@ function Header({ setShow, size, isLogin, onLogoutSuccess }) {
                                         <img src={avatar} alt="avatar" className={cx('avatar_login')}></img>
                                     ) : (
                                         <Link to={config.routes.login}>
-                                            {' '}
-                                            <button className={cx('btn-login')}>Đăng Nhập</button>
+                                            {loggedInUser
+                                            ? 
+                                            (
+                                               <div>
+                                                <img className={cx('avatar_login')} src={loggedInUser.photoURL} alt='avatar'/>
+                                                    <div className={cx('messageSuccess')}>
+                                                        <span style={{marginLeft: '5px'}}>Login Success</span>
+                                                    </div>
+                                                    <button  className={cx('btn-logout')} onClick={Logout}>Đăng Xuất</button>
+                                                </div>
+                                            )
+
+                                             : (
+                                                <button className={cx('btn-login')}>Đăng Nhập</button>)}
                                         </Link>
                                     )}
                                 </div>
